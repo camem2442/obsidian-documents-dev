@@ -1,0 +1,60 @@
+{
+  "schema": "public-export-v1",
+  "export_id": "file-hash-pilot-20261005-01",
+  "scope": "file_hash direct unit execution only",
+  "files": [
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "size": 974,
+      "sha256": "560d2976e00dbd4d6bc0d4b5c809323fa6a33be054cb38c29e9997d8e80029bc",
+      "git_blob_sha": "561b74a29cab25906193208c28bc64ca66b9dcb6"
+    },
+    {
+      "path": "_scripts_2/apps/__init__.py",
+      "mode": "100644",
+      "size": 61,
+      "sha256": "c49468a508a90cd450231d0f555110ea82134b82422bf30a57ca8338a6d07060",
+      "git_blob_sha": "69b369ada172769b9f10389825c7d38f915b9364"
+    },
+    {
+      "path": "_scripts_2/apps/documents/__init__.py",
+      "mode": "100644",
+      "size": 38,
+      "sha256": "f369119f25a90b6b581d2e3bf92df53f533fb77fb7a1c84a9d0b01ef220fddb1",
+      "git_blob_sha": "05abe38ce60422eaed77b89d128e681805a9d170"
+    },
+    {
+      "path": "_scripts_2/apps/documents/common/__init__.py",
+      "mode": "100644",
+      "size": 72,
+      "sha256": "4e04761b5dfffd8b08afb01e23753ae0e0855fcb2f0259075485bceaafcfb149",
+      "git_blob_sha": "3262a878b1e093e3b580eadb9535e19304544ce2"
+    },
+    {
+      "path": "_scripts_2/apps/documents/common/file_hash.py",
+      "mode": "100644",
+      "size": 861,
+      "sha256": "30104d3422d3797fdc2c62fad611f1358c0678c0e8acb2ee4c50e1e9a7b8f431",
+      "git_blob_sha": "85f04393ed25ef52ad2ba3435fbb4efb6a356b14"
+    },
+    {
+      "path": "tests/test_file_hash.py",
+      "mode": "100644",
+      "size": 1641,
+      "sha256": "fe443831dd8af93e74725914e4c28a65b1506bb8a736033cd18deac9e10c865e",
+      "git_blob_sha": "9cf59d51d6335245b9e8dc6f05849c628fd00765"
+    }
+  ],
+  "self_digest": "Excluded; final approval receipt covers manifest and full tree",
+  "verification": {
+    "unittest_passed": 5,
+    "dependencies": "Python standard library",
+    "network_required": false
+  },
+  "limitations": [
+    "Not a full application or private source checkout",
+    "No native GUI, CI or consumer acceptance",
+    "No license grant added by this package"
+  ]
+}
