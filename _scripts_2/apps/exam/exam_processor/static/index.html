@@ -14,12 +14,22 @@
 <script defer src="../static/evaluation.js?v=r6-1"></script>
 <script defer src="../static/offline_evaluation.js?v=r7-1"></script>
 <script defer src="../static/batch_jobs.js?v=1"></script>
+<script defer src="../static/export_jobs.js?v=1"></script>
 <script defer src="../static/input_jobs.js?v=1"></script>
 <link rel="stylesheet" href="../static/input_jobs.css?v=1">
 <link rel="stylesheet" href="../static/ux-flow.css?v=1">
-<script defer src="../static/ux-flow.js?v=1"></script></head>
+<script defer src="../static/ux-flow.js?v=1"></script><style>
+#exports-dialog input[type="checkbox"] { width:17px; min-width:17px; max-width:17px; height:17px; min-height:17px; flex:0 0 17px; align-self:center; padding:0; margin:0; }
+#exports-dialog label:has(>input[type="checkbox"]) { display:flex; flex-direction:row; align-items:center; gap:8px; min-width:0; overflow-wrap:anywhere; }
+#exports-jobs > div { margin: .75rem 0; }
+#exports-jobs label { display:block; margin-bottom:.4rem; }
+#exports-results article { padding:.5rem 0; border-top:1px solid #ddd; }
+#exports-results p { white-space:pre-wrap; overflow-wrap:anywhere; }
+#exports-dialog pre { white-space:pre-wrap; overflow-wrap:anywhere; }
+</style>
+</head>
 <body>
-<header><div class="brand"><i data-lucide="files"></i><strong>Exam Processor</strong><span id="connection-state" class="connection-state" role="status">연결 확인 중</span></div><div class="job-picker"><button id="open-jobs-dialog" class="job-btn" type="button" title="저장된 작업 관리"><i data-lucide="folder-kanban"></i><span id="job-btn-label">저장된 작업 선택</span><i data-lucide="chevron-down" class="chevron"></i></button><select id="jobs" aria-label="저장된 작업" hidden></select></div><div class="header-actions"><details id="review-tools"><summary>처리·검수 도구</summary><div class="review-tools-menu"><strong>AI 처리</strong><section class="batch-tools" aria-label="현재 작업 일괄 처리"><label for="batch-operation">처리 단계</label><select id="batch-operation" aria-label="처리 단계"><option value="extract">1. AI 변환 · 미변환 항목</option><option value="audit">2. AI 원본 대조 · 미대조 항목</option></select><button id="batch-start"><i data-lucide="play"></i>선택 단계 실행</button><button id="batch-pause" title="현재 호출 완료 후 중지"><i data-lucide="pause"></i>일시정지</button><button id="batch-resume"><i data-lucide="play"></i>이어서 실행</button><button id="batch-retry"><i data-lucide="rotate-cw"></i>실패 재시도</button><span id="batch-status" role="status"></span><button type="button" id="ai-log-open" title="AI 처리 로그"><i data-lucide="scroll-text"></i>AI 로그</button><span id="job-summary"></span></section><details id="batch-details"><summary>일괄 처리 항목 목록</summary><div id="batch-log"></div></details><strong>검수·평가</strong><div class="tool-buttons"><button type="button" id="focused-queue">지적 카드 검수</button><button type="button" id="sample-queue">표본 검수</button><button type="button" id="bulk-queue">일괄 승인 계획</button><button type="button" id="evaluation-queue">검수 기록 · 평가</button><button type="button" id="offline-open">오프라인 비교 평가</button><button type="button" id="multijob-open">여러 작업 배치 처리</button></div></div></details><button id="vault-files" class="primary" title="KS 볼트에서 변환할 PDF 선택"><i data-lucide="folder-search"></i>PDF 선택</button><button id="inputs-open" type="button">여러 원본 준비</button><button id="inputs-origin" type="button">입력 생성 기록</button><button id="import" title="파일의 전체 경로를 직접 입력"><i data-lucide="text-cursor-input"></i>직접 경로 입력</button><button id="export" title="승인된 세트를 KS에 Markdown 폴더로 저장"><i data-lucide="folder-output"></i><span id="export-label">Markdown 폴더 저장</span></button></div></header>
+<header><div class="brand"><i data-lucide="files"></i><strong>Exam Processor</strong><span id="connection-state" class="connection-state" role="status">연결 확인 중</span></div><div class="job-picker"><button id="open-jobs-dialog" class="job-btn" type="button" title="저장된 작업 관리"><i data-lucide="folder-kanban"></i><span id="job-btn-label">저장된 작업 선택</span><i data-lucide="chevron-down" class="chevron"></i></button><select id="jobs" aria-label="저장된 작업" hidden></select></div><div class="header-actions"><details id="review-tools"><summary>처리·검수 도구</summary><div class="review-tools-menu"><strong>AI 처리</strong><section class="batch-tools" aria-label="현재 작업 일괄 처리"><label for="batch-operation">처리 단계</label><select id="batch-operation" aria-label="처리 단계"><option value="extract">1. AI 변환 · 미변환 항목</option><option value="audit">2. AI 원본 대조 · 미대조 항목</option></select><button id="batch-start"><i data-lucide="play"></i>선택 단계 실행</button><button id="batch-pause" title="현재 호출 완료 후 중지"><i data-lucide="pause"></i>일시정지</button><button id="batch-resume"><i data-lucide="play"></i>이어서 실행</button><button id="batch-retry"><i data-lucide="rotate-cw"></i>실패 재시도</button><span id="batch-status" role="status"></span><button type="button" id="ai-log-open" title="AI 처리 로그"><i data-lucide="scroll-text"></i>AI 로그</button><span id="job-summary"></span></section><details id="batch-details"><summary>일괄 처리 항목 목록</summary><div id="batch-log"></div></details><strong>검수·평가</strong><div class="tool-buttons"><button type="button" id="focused-queue">지적 카드 검수</button><button type="button" id="sample-queue">표본 검수</button><button type="button" id="bulk-queue">일괄 승인 계획</button><button type="button" id="evaluation-queue">검수 기록 · 평가</button><button type="button" id="offline-open">오프라인 비교 평가</button><button type="button" id="multijob-open">여러 작업 배치 처리</button><button type="button" id="exports-open">승인본 일괄 출력</button></div></div></details><button id="vault-files" class="primary" title="KS 볼트에서 변환할 PDF 선택"><i data-lucide="folder-search"></i>PDF 선택</button><button id="inputs-open" type="button">여러 원본 준비</button><button id="inputs-origin" type="button">입력 생성 기록</button><button id="import" title="파일의 전체 경로를 직접 입력"><i data-lucide="text-cursor-input"></i>직접 경로 입력</button><button id="export" title="승인된 세트를 KS에 Markdown 폴더로 저장"><i data-lucide="folder-output"></i><span id="export-label">Markdown 폴더 저장</span></button></div></header>
 <div id="notice" role="status" hidden></div>
 
 <section id="review-alert" class="review-alert" role="status" aria-label="현재 문항 검수 알림" hidden><div class="audit-banner-copy"><div id="warnings"></div><div class="audit-banner-summary"><strong>검수 상태</strong><span id="audit-banner-text"></span><span id="preview-status"></span><span id="approval-status"></span></div></div></section>
@@ -198,4 +208,23 @@
 <p>배치 대상·revision·제외 사유를 다시 확인하고 배치 계획을 저장한 뒤 별도로 실행합니다.</p>
 </section><details><summary>고정 계획·근거 해시·이전 시도</summary><pre id="inputs-history"></pre></details>
 </div></dialog>
+<dialog id="exports-dialog" aria-labelledby="exports-title" style="width:min(900px,94vw);max-height:90vh;overflow:auto">
+<h2 id="exports-title">승인본 일괄 출력</h2>
+<p>작업 전체의 현재 승인본을 기존 exporter로 출력합니다. 항목 승인은 기존 검수 화면에서 진행합니다.</p>
+<button id="exports-close" type="button">닫기</button>
+<div id="exports-jobs" aria-label="출력할 작업"></div>
+<label>출력 목적지 (비우면 기본값) <input id="exports-destination" type="text"></label>
+<button id="exports-preview" type="button">선택·제외 사유 미리보기</button>
+<button id="exports-plan" type="button" disabled>계획 저장</button>
+<pre id="exports-preview-result" style="white-space:pre-wrap;overflow-wrap:anywhere"></pre>
+<hr><label>저장된 출력 기록 <select id="exports-runs"><option value="">선택하세요</option></select></label>
+<button id="exports-reload" type="button">기록 새로고침</button>
+<pre id="exports-fixed" style="white-space:pre-wrap;overflow-wrap:anywhere"></pre>
+<label><input id="exports-confirm" type="checkbox"> 이 계획의 대상·revision·목적지·제외 사유를 확인했습니다</label>
+<button id="exports-execute" type="button" disabled>확인한 승인본 출력</button>
+<button id="exports-recover" type="button" disabled>산출물 근거로 복구 확인</button>
+<p>창을 닫거나 연결이 끊겨도 서버 처리는 계속될 수 있습니다. 복구는 재출력하지 않습니다. 실패·미실행은 검토 후 새 계획을 만들고, 결과 불명확은 기존 파일을 보존하세요.</p>
+<div id="exports-feedback" role="status" aria-live="polite"></div>
+<div id="exports-results"></div>
+</dialog>
 </body></html>

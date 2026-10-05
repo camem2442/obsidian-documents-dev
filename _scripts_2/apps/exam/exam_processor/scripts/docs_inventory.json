@@ -376,6 +376,16 @@
       "path": "planning/body-metadata-contract-plan.md",
       "role": "plan",
       "status": "proposed"
+    },
+    {
+      "path": "reviews/2026-10-01-o11-hosted-focused-review/acceptance.md",
+      "role": "evidence",
+      "status": null
+    },
+    {
+      "path": "reviews/2026-10-01-o11-hosted-ux-vertical/acceptance.md",
+      "role": "evidence",
+      "status": null
     }
   ]
 }

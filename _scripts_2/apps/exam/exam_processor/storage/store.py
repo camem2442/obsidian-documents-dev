@@ -1180,7 +1180,7 @@ class Store:
             self._review_svc.waive_audit(job_dir, item_id, expected, reason)
             return self.get(job_id)
 
-    def export(self, job_id, destination=None, source_code=None):
+    def export(self, job_id, destination=None, source_code=None, *, export_receipt=None):
         with self.lock:
             job_dir = self.job_dir(job_id)
             if not (job_dir / "job.json").exists():
@@ -1280,10 +1280,12 @@ class Store:
                     {"id": rec.question.question_id, "revision": rec.provenance.revision_id}
                     for rec in selected_records
                 ]
-                atomic_json(
-                    stage / "manifest.json",
-                    {"job_id": job_id, "source_code": source_code, "items": manifest_items}
-                )
+                export_manifest = {"job_id": job_id, "source_code": source_code, "items": manifest_items}
+                if export_receipt is not None:
+                    from .export_evidence import payload_files
+                    export_manifest["export_receipt"] = copy.deepcopy(export_receipt)
+                    export_manifest["files"] = payload_files(stage)
+                atomic_json(stage / "manifest.json", export_manifest)
                 os.rename(stage, batch)
             except Exception:
                 shutil.rmtree(stage, ignore_errors=True)

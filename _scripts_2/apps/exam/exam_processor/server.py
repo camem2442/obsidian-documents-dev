@@ -25,6 +25,8 @@ def create_app(store=None, batch_processor=None):
     batches = BatchJobs(store, processor=batch_processor, busy=busy)
     from .storage.input_jobs import InputJobs
     inputs = InputJobs(store)
+    from .storage.export_jobs import ExportJobs
+    exports = ExportJobs(store)
     static = Path(__file__).parent / "static"
     app.mount("/static", StaticFiles(directory=static), name="static")
 
@@ -127,6 +129,40 @@ def create_app(store=None, batch_processor=None):
                     pass
             threading.Thread(target=worker, daemon=True).start()
         return result
+
+    @app.get("/api/export-jobs")
+    def export_job_status():
+        return exports.dashboard()
+
+    @app.get("/api/export-plans")
+    def export_plan_list():
+        return exports.list()
+
+    @app.get("/api/export-plans/{plan_id}")
+    def export_plan_get(plan_id: str):
+        return exports.get(plan_id)
+
+    @app.post("/api/export-plans/preview")
+    def export_plan_preview(payload: dict):
+        destination = inside_vault(payload["destination"]) if payload.get("destination") else None
+        return exports.preview(payload.get("job_ids"), destination)
+
+    @app.post("/api/export-plans")
+    def export_plan_action(payload: dict):
+        try:
+            action = payload.get("action")
+            if action == "plan":
+                destination = inside_vault(payload["destination"]) if payload.get("destination") else None
+                return exports.plan(payload.get("job_ids"), payload.get("preview_hash"),
+                                    payload.get("request_id"), destination)
+            if action == "execute":
+                return exports.execute(payload.get("plan_id"), payload.get("revision"),
+                                       payload.get("confirmed_plan_hash"))
+            if action == "recover":
+                return exports.recover(payload.get("plan_id"))
+            raise ValueError("알 수 없는 출력 동작입니다.")
+        except OSError:
+            return JSONResponse({"error": "출력 기록 저장 실패. 새 요청을 만들지 말고 기록을 조회·복구하세요."}, 500)
 
     @app.get("/api/input-formats")
     def input_formats():

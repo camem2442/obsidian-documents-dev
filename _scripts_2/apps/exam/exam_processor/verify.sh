@@ -33,6 +33,7 @@ node "$SCRIPT_DIR/tests/ui_bulk_approval.cjs"
 node "$SCRIPT_DIR/tests/ui_evaluation.cjs"
 node "$SCRIPT_DIR/tests/ui_offline_evaluation.cjs"
 node "$SCRIPT_DIR/tests/ui_batch_jobs.cjs"
+node "$SCRIPT_DIR/tests/ui_export_jobs.cjs"
 node "$SCRIPT_DIR/tests/ui_input_jobs.cjs"
 node "$SCRIPT_DIR/tests/ui_ux_flow.cjs"
 
