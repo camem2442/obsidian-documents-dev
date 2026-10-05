@@ -1,0 +1,9 @@
+{
+  "name": "lecture-transcriber-browser-tests",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "test:ui:smoke": "node tests/ui_smoke.cjs",
+    "test:ui:workflow": "node tests/ui_workflow.cjs"
+  }
+}

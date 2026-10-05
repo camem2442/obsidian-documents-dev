@@ -1,0 +1,20 @@
+.learning-panel{margin-top:14px;border-top:1px solid #d7ddda;padding-top:10px}
+.learning-panel summary{cursor:pointer;font-size:12px;font-weight:600}
+.learning-form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 12px;padding-top:10px}
+.learning-form label{display:flex;flex-direction:column;gap:4px;font-size:11px;color:#5c6d63}
+.learning-form input,.learning-form select,.learning-form textarea{width:100%;font-size:12px}
+.learning-form textarea{min-height:68px;resize:vertical}
+.learning-form .learning-lesson,.learning-actions,#finding-list{grid-column:1/-1}
+.learning-actions{display:flex;align-items:center;justify-content:space-between;font-size:11px;color:#64756c}
+.finding-entry{border-top:1px solid #d7ddda;padding:7px 0;font-size:12px}
+.rule-status{display:inline-block;margin-left:8px;font-size:11px;font-weight:600}
+.rule-status.duplicate{color:#8a6100}
+.rule-status.conflict{color:#b42318}
+.rule-status.resolved{color:#087443}
+.finding-entry p,.finding-empty{margin:4px 0;color:#52645b;font-size:12px}
+.finding-entry button{font-size:11px;padding:3px 7px}
+.rule-run-summary{grid-column:1/-1;margin:4px 0;color:#52645b;font-size:11px;overflow-wrap:anywhere}
+.rule-run-summary details{margin-top:5px}
+.rule-run-summary article{padding:5px 0;border-top:1px solid #e2e7e4}
+.rule-run-summary article p{margin:3px 0}
+@media(max-width:760px){.learning-form{grid-template-columns:minmax(0,1fr)}}

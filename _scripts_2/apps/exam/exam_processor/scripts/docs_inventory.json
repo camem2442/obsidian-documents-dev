@@ -1,0 +1,381 @@
+{
+  "schema_version": 1,
+  "purpose": "Explicit documentation ownership inventory; path coverage is not semantic freshness evidence.",
+  "documents": [
+    {
+      "path": "HANDOFF.md",
+      "role": "handoff",
+      "status": null
+    },
+    {
+      "path": "README.md",
+      "role": "navigation",
+      "status": "current"
+    },
+    {
+      "path": "contracts/README.md",
+      "role": "navigation",
+      "status": "current"
+    },
+    {
+      "path": "contracts/ai/providers/gemini-structured-output.md",
+      "role": "contract",
+      "status": "current"
+    },
+    {
+      "path": "contracts/ai/providers/reference/README.md",
+      "role": "reference",
+      "status": null
+    },
+    {
+      "path": "contracts/ai/vision-response-contract.md",
+      "role": "contract",
+      "status": "current"
+    },
+    {
+      "path": "contracts/architecture.md",
+      "role": "contract",
+      "status": "current"
+    },
+    {
+      "path": "contracts/data-model.md",
+      "role": "contract",
+      "status": "current"
+    },
+    {
+      "path": "contracts/evaluation.md",
+      "role": "contract",
+      "status": "current"
+    },
+    {
+      "path": "contracts/execution.md",
+      "role": "contract",
+      "status": "current"
+    },
+    {
+      "path": "contracts/output.md",
+      "role": "contract",
+      "status": "current"
+    },
+    {
+      "path": "contracts/review.md",
+      "role": "contract",
+      "status": "current"
+    },
+    {
+      "path": "contracts/set-export.md",
+      "role": "contract",
+      "status": "current"
+    },
+    {
+      "path": "contracts/storage.md",
+      "role": "contract",
+      "status": "current"
+    },
+    {
+      "path": "contracts/study-ingestion.md",
+      "role": "contract",
+      "status": "current"
+    },
+    {
+      "path": "formats/english/common-english-markdown.md",
+      "role": "format",
+      "status": null
+    },
+    {
+      "path": "formats/english/kice-english.md",
+      "role": "format",
+      "status": null
+    },
+    {
+      "path": "formats/korean/ebsi_korean_explanation.md",
+      "role": "format",
+      "status": null
+    },
+    {
+      "path": "formats/korean/kice_korean.md",
+      "role": "format",
+      "status": null
+    },
+    {
+      "path": "formats/korean/korean_notes.md",
+      "role": "format",
+      "status": null
+    },
+    {
+      "path": "formats/math/curriculum-classification.md",
+      "role": "format",
+      "status": null
+    },
+    {
+      "path": "formats/math/kice-math.md",
+      "role": "format",
+      "status": null
+    },
+    {
+      "path": "formats/math/workbook-implementation-history-2026-09-28.md",
+      "role": "evidence",
+      "status": "historical"
+    },
+    {
+      "path": "formats/math/workbook-plan.md",
+      "role": "format",
+      "status": "partial"
+    },
+    {
+      "path": "guides/current-workflow.md",
+      "role": "guide",
+      "status": "current"
+    },
+    {
+      "path": "guides/documentation.md",
+      "role": "guide",
+      "status": "current"
+    },
+    {
+      "path": "guides/format-guide.md",
+      "role": "guide",
+      "status": null
+    },
+    {
+      "path": "guides/hanwangi-a1-d1-rerun.md",
+      "role": "guide",
+      "status": null
+    },
+    {
+      "path": "guides/review-ui.md",
+      "role": "guide",
+      "status": "current"
+    },
+    {
+      "path": "guides/sample-reference-guide.md",
+      "role": "guide",
+      "status": null
+    },
+    {
+      "path": "guides/study-ingestion.md",
+      "role": "guide",
+      "status": "current"
+    },
+    {
+      "path": "guides/text-layout.md",
+      "role": "guide",
+      "status": null
+    },
+    {
+      "path": "planning/format-interface.md",
+      "role": "plan",
+      "status": "proposal"
+    },
+    {
+      "path": "planning/integration.md",
+      "role": "plan",
+      "status": "proposal"
+    },
+    {
+      "path": "planning/jev-review-orchestration.md",
+      "role": "plan",
+      "status": "proposal"
+    },
+    {
+      "path": "planning/open-items.md",
+      "role": "registry",
+      "status": "current"
+    },
+    {
+      "path": "planning/output-profiles.md",
+      "role": "plan",
+      "status": "proposal"
+    },
+    {
+      "path": "planning/reliability.md",
+      "role": "plan",
+      "status": "proposal"
+    },
+    {
+      "path": "planning/roadmap.md",
+      "role": "plan",
+      "status": "current"
+    },
+    {
+      "path": "planning/target-workflow.md",
+      "role": "plan",
+      "status": "proposal"
+    },
+    {
+      "path": "reviews/2026-09-08-ai-review-proposal.md",
+      "role": "evidence",
+      "status": "historical"
+    },
+    {
+      "path": "reviews/2026-09-26-multi-input-acceptance.md",
+      "role": "evidence",
+      "status": "historical"
+    },
+    {
+      "path": "reviews/2026-09-26-multijob-batch-acceptance.md",
+      "role": "evidence",
+      "status": "historical"
+    },
+    {
+      "path": "reviews/2026-09-26-r2-live-acceptance.md",
+      "role": "evidence",
+      "status": null
+    },
+    {
+      "path": "reviews/2026-09-26-r3-focused-review-acceptance.md",
+      "role": "evidence",
+      "status": null
+    },
+    {
+      "path": "reviews/2026-09-26-r4-sample-review-acceptance.md",
+      "role": "evidence",
+      "status": null
+    },
+    {
+      "path": "reviews/2026-09-26-r5-bulk-approval-acceptance.md",
+      "role": "evidence",
+      "status": null
+    },
+    {
+      "path": "reviews/2026-09-26-r6-evaluation-acceptance.md",
+      "role": "evidence",
+      "status": null
+    },
+    {
+      "path": "reviews/2026-09-26-r7-offline-evaluation-acceptance.md",
+      "role": "evidence",
+      "status": null
+    },
+    {
+      "path": "reviews/2026-09-26-standard-output-acceptance.md",
+      "role": "evidence",
+      "status": null
+    },
+    {
+      "path": "reviews/2026-09-26-standard-output-plan.md",
+      "role": "evidence",
+      "status": "historical"
+    },
+    {
+      "path": "reviews/2026-09-26-study-ingestion.md",
+      "role": "evidence",
+      "status": "historical"
+    },
+    {
+      "path": "reviews/2026-09-26-study-revision-handoff-history.md",
+      "role": "evidence",
+      "status": "historical"
+    },
+    {
+      "path": "reviews/2026-09-26-uiux-design-review.md",
+      "role": "evidence",
+      "status": "historical"
+    },
+    {
+      "path": "reviews/2026-09-26-uiux-flow-review.md",
+      "role": "evidence",
+      "status": "historical"
+    },
+    {
+      "path": "reviews/2026-09-26-ux-f1-acceptance.md",
+      "role": "evidence",
+      "status": null
+    },
+    {
+      "path": "reviews/2026-09-26-ux-f1-design.md",
+      "role": "evidence",
+      "status": "historical"
+    },
+    {
+      "path": "reviews/2026-09-27-document-reorganization.md",
+      "role": "evidence",
+      "status": "historical"
+    },
+    {
+      "path": "reviews/2026-09-27-handoff-history.md",
+      "role": "evidence",
+      "status": "historical"
+    },
+    {
+      "path": "reviews/2026-09-27-hanwangi-a2-fresh-acceptance.md",
+      "role": "evidence",
+      "status": null
+    },
+    {
+      "path": "reviews/2026-09-27-hanwangi-recursive-review.md",
+      "role": "evidence",
+      "status": null
+    },
+    {
+      "path": "reviews/2026-09-27-hanwangi-rule-transfer.md",
+      "role": "evidence",
+      "status": null
+    },
+    {
+      "path": "reviews/2026-09-27-implementation-history.md",
+      "role": "evidence",
+      "status": "historical"
+    },
+    {
+      "path": "reviews/2026-09-27-initial-architecture-history.md",
+      "role": "evidence",
+      "status": "historical"
+    },
+    {
+      "path": "reviews/2026-09-27-review-ui-history.md",
+      "role": "evidence",
+      "status": "historical"
+    },
+    {
+      "path": "reviews/2026-09-27-roadmap-history.md",
+      "role": "evidence",
+      "status": "historical"
+    },
+    {
+      "path": "reviews/2026-09-27-single-job-workflow-history.md",
+      "role": "evidence",
+      "status": "historical"
+    },
+    {
+      "path": "reviews/2026-09-27-whole-item-edit-acceptance.md",
+      "role": "evidence",
+      "status": null
+    },
+    {
+      "path": "reviews/asset-review-2506-2026-09-10.md",
+      "role": "evidence",
+      "status": null
+    },
+    {
+      "path": "reviews/canonical-contract-review-2026-09-13.md",
+      "role": "evidence",
+      "status": null
+    },
+    {
+      "path": "reviews/hanwangi-inventory-2026-09-13.md",
+      "role": "evidence",
+      "status": null
+    },
+    {
+      "path": "reviews/troubleshooting-2026-09-17-exam-processor-review-ui.md",
+      "role": "evidence",
+      "status": null
+    },
+    {
+      "path": "reviews/uiux-review-2026-09-10.md",
+      "role": "evidence",
+      "status": null
+    },
+    {
+      "path": "status.md",
+      "role": "status",
+      "status": "current"
+    },
+    {
+      "path": "planning/body-metadata-contract-plan.md",
+      "role": "plan",
+      "status": "proposed"
+    }
+  ]
+}

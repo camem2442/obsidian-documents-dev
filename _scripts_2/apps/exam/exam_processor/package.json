@@ -1,0 +1,11 @@
+{
+  "name": "exam-processor-browser-tests",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "./dev.sh",
+    "start": "./run.sh --port 7893",
+    "test:ui": "node tests/ui_workflow.cjs",
+    "test:ui:smoke": "node tests/ui_smoke.cjs"
+  }
+}

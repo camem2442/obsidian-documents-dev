@@ -1,0 +1,1887 @@
+{
+  "schema": "reviewed-component-input-v1",
+  "component": "exam-processor",
+  "purpose": "EX-N01 synthetic development and verification",
+  "files": [
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/__init__.py",
+      "git_blob_sha": "dba44f0e6ac36ae4270476f8b7fff2c355aecafc",
+      "git_mode": "100644",
+      "size": 70,
+      "sha256": "7fc512a87e8649d97b3b4869853bd95619d8b0c0cf29231d8117b34ca7dab19b"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/__main__.py",
+      "git_blob_sha": "3eb303ea15d07d2fd7bec72a6d1dc6f533f81c77",
+      "git_mode": "100644",
+      "size": 3690,
+      "sha256": "2f30f37062703e2f726070fc4f37fc325b221245d9b024627b30b7bc9954949d"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/ai.py",
+      "git_blob_sha": "11cae05110a0e88ba205caff392dc43b6fad27d7",
+      "git_mode": "100644",
+      "size": 76,
+      "sha256": "c7bf36938317faec50f2c60418dbd7bfa83aa29690dc0bfda6eafdf3b5296d71"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/ai_worker.py",
+      "git_blob_sha": "e4a48b2bd07e755c3a9a76c29577c0eb16895eb9",
+      "git_mode": "100644",
+      "size": 125,
+      "sha256": "2da2fa5ac7ab69bd684e29dcca6623bac8948095779d690b0214d784e8a678f0"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/cli/dry_run_matcher.py",
+      "git_blob_sha": "970957c56e57889a6d01e3b9b1d59c49230556f1",
+      "git_mode": "100644",
+      "size": 10734,
+      "sha256": "73123b1983936401ea6f9e1badae2b34db9cd640eb01f83ff2728c5321772d43"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/cli/study_ingest.py",
+      "git_blob_sha": "19d3bb343e40f9296a1993fa2d6447532259e4fe",
+      "git_mode": "100644",
+      "size": 3503,
+      "sha256": "504fb117e3373c883174eb57bf23ac58bf4a60fd4ee50e98061188c2f908f963"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/config.py",
+      "git_blob_sha": "257479517876f03ac84d45060cf6b01e21b349e1",
+      "git_mode": "100644",
+      "size": 1083,
+      "sha256": "a57e8bc37b21ef45a87fc2a7e3e0484b5b571dd4d9b62bd21d2eec86c4fa21c1"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/domain/__init__.py",
+      "git_blob_sha": "823752bfa91ef884b73614851cf0ecd27736a039",
+      "git_mode": "100644",
+      "size": 435,
+      "sha256": "727e64dfefb2a51f218088ce83a67ac5cb102a01a017fe595f134047e8a4c1d5"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/domain/canonical_factory.py",
+      "git_blob_sha": "3d0bd9a0b802977b996daab205a7a39df26339cf",
+      "git_mode": "100644",
+      "size": 6107,
+      "sha256": "f8cf9e616e81d4192f0ad0f9b4be8b82150ab00cad21ddda8486262d1c755ce0"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/domain/canonical_mapping.py",
+      "git_blob_sha": "addc9bb5fcb231e9eb29206beba6a3fb0d41754c",
+      "git_mode": "100644",
+      "size": 8549,
+      "sha256": "5c675527f4af3da15618be6871ddf14d1f6bcbac8eee6cef14ae4f5c6dd1bc13"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/domain/focused_review.py",
+      "git_blob_sha": "de80d08a6cf6e30029d932fabff92116d40e5bd8",
+      "git_mode": "100644",
+      "size": 4982,
+      "sha256": "84df6243885a95361b5a3f9978c92bb34b4eba2b8479b5c7acdd5ab524a53370"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/domain/job_manifest.py",
+      "git_blob_sha": "aae40fecc1fb419f5c0652a4d1974e5a1e27dbbf",
+      "git_mode": "100644",
+      "size": 2420,
+      "sha256": "f8d86ff69d32e6b552def2ff245091817c88eb533bc35d1c336403cf09201786"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/domain/job_relations.py",
+      "git_blob_sha": "429f39c166a1cae63374d013db164ebbd1d2d82d",
+      "git_mode": "100644",
+      "size": 2131,
+      "sha256": "aca2875508a169e6345766a6a51611bb36c252f6b5c53dd5884b8cda446c2b3d"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/domain/job_runtime.py",
+      "git_blob_sha": "4936cab3e17c39164286935776e1ff3bfe521873",
+      "git_mode": "100644",
+      "size": 1835,
+      "sha256": "953c1cbfb5af90c09b88adf010a907c7bf2e35bfcf23d57d2dcb75dc028858d9"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/domain/match_models.py",
+      "git_blob_sha": "3c94733baf5bd91723a679e946d1dd59e3a0f57d",
+      "git_mode": "100644",
+      "size": 6873,
+      "sha256": "befac43e92f5af31b3a06a9962dde609750dbcab837a1f32a3fac8e977062f70"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/domain/math_quality.py",
+      "git_blob_sha": "698955a82f0a086bd6da2993a12578ad1bae1e6a",
+      "git_mode": "100644",
+      "size": 4529,
+      "sha256": "429122f4d653438e32921278d741496b662a4d2d2a4e445fdcba02aa1239f926"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/domain/models.py",
+      "git_blob_sha": "0df346aeb159e0d27bb1e6dd2822316fa49a9825",
+      "git_mode": "100644",
+      "size": 15929,
+      "sha256": "c8e266b78e9d5e6993cd850011407445379e300e6d58c5ab00bf005bde28e746"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/domain/review_decision.py",
+      "git_blob_sha": "e0d4db98384fc2db412f4d208138aa533f6a1d37",
+      "git_mode": "100644",
+      "size": 10315,
+      "sha256": "3f326acfe497ed9af785323270f65bdb6532c5c562fd7f7fe78dc05bcff55298"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/domain/review_state.py",
+      "git_blob_sha": "3c75c8c17616947b7adfaca07afe9b2e29af38b2",
+      "git_mode": "100644",
+      "size": 3431,
+      "sha256": "111b65477c206a564346a89c9bfa6db00007979b16d48819454866bc66dd467a"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/domain/rich_content.py",
+      "git_blob_sha": "3fa2c02a322fc58f58ffcc7471b145b8e58faa2a",
+      "git_mode": "100644",
+      "size": 3623,
+      "sha256": "25c6a517664eb1a784c2006431caaa9dab58caaad1f28c610bc698873fdb51ef"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/domain/services/__init__.py",
+      "git_blob_sha": "4d5ad44f7789d08d04555952da335b959a1be3a0",
+      "git_mode": "100644",
+      "size": 205,
+      "sha256": "da510c7d41395b8132c11520fede145c23407fb6a727ef3d830baecd19070d0e"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/domain/services/bundle_detector.py",
+      "git_blob_sha": "239f1adb3c6ae2e15567c2f94e338b2d74e073a6",
+      "git_mode": "100644",
+      "size": 3622,
+      "sha256": "0e64971cd00ce0d20d7eaecaf0d43038463cb2ec6054a1dba17b7e02da8e3b7c"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/domain/services/evidence_matcher.py",
+      "git_blob_sha": "422d316de28675cfd2b18ad903d5d62fe28f51a9",
+      "git_mode": "100644",
+      "size": 6629,
+      "sha256": "8daf093b220fad7437bb5dcff42e66634f730a013056f430ad03b8ecd984f2b5"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/domain/services/exam_scheme_resolver.py",
+      "git_blob_sha": "49b13b20ccd74ed2fa15b799c754c10f54aed98c",
+      "git_mode": "100644",
+      "size": 8803,
+      "sha256": "c3a4aeba5f234f55a1524c98eb32bf5067810075aa70ee7e993a21ca43096332"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/domain/services/ks_vault_scanner.py",
+      "git_blob_sha": "fb149de7027fbf0348ee13ec08e0375faff42421",
+      "git_mode": "100644",
+      "size": 3556,
+      "sha256": "30325e7ab460fc0a763f5a5050298715f18b7ba0e9e592b88aa076a0bb4af10f"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/domain/services/match_apply_service.py",
+      "git_blob_sha": "80065734cb345481e99d191638e637e15508aaed",
+      "git_mode": "100644",
+      "size": 4879,
+      "sha256": "74e8aa18902e3a712b1bc415fdb3727519123a22aeaf6b81a9e442e12baf3a0f"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/domain/services/origin_evidence_parser.py",
+      "git_blob_sha": "69d01f60669d998200f2aa666e17432ee05fe6a3",
+      "git_mode": "100644",
+      "size": 10976,
+      "sha256": "4f44063388042f4cbc15321bd535e0ba59cf129484e565a1ef5a552dfcb68b47"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/domain/services/record_service.py",
+      "git_blob_sha": "7afefac77ab3a072f4cfea90d34dce4de7e20337",
+      "git_mode": "100644",
+      "size": 23981,
+      "sha256": "b3a7e17cf2928fb8ae5ef3282fb82b8292a40a269be5932b2b7e2f75c15fefde"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/domain/services/review_service.py",
+      "git_blob_sha": "1d9f5e30c54556775008d735ef02ed54e5284007",
+      "git_mode": "100644",
+      "size": 16290,
+      "sha256": "491f0f01b6c36c3525d122d9ef1a37e7afac9259d5841381f293c7a23550b5f5"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/domain/standard_content.py",
+      "git_blob_sha": "93b7dc307aadf4b57bb80ed1c13eb3a4e65f18c7",
+      "git_mode": "100644",
+      "size": 4299,
+      "sha256": "81bdbfb903a100b63803436eca294051936a2aea65c5040898bbd3d6ef4108a2"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/domain/text_layout.py",
+      "git_blob_sha": "60986b337a69a560c4fab2799187b287fb8f52e5",
+      "git_mode": "100644",
+      "size": 4001,
+      "sha256": "35d7ad6b02d12db6d6fdff8ee01ff24c5a82660ab64962e38bb3188daf69e6f7"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/domain/workbook_content.py",
+      "git_blob_sha": "e4bda1832f34b61ef9456e0a01266742d244db26",
+      "git_mode": "100644",
+      "size": 9545,
+      "sha256": "6d0b89872f95b18853bd7c3263f047c93032e7bb599d79e02264e8883508cc46"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/exporters/__init__.py",
+      "git_blob_sha": "229e704426651d48bfeb76e1886b211c9212ca96",
+      "git_mode": "100644",
+      "size": 269,
+      "sha256": "0cf90352f6c08b6248854d465c81de3046719fb53fabe946056ff4e4e6393f24"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/exporters/english_export.py",
+      "git_blob_sha": "05de320e3c0c7fab450c1507472cfe3340282ee8",
+      "git_mode": "100644",
+      "size": 6362,
+      "sha256": "130b49412237921d6c42133a519e24dfcbd5e3b5013bb5df04d2cd42d1a47ed9"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/exporters/profiles/__init__.py",
+      "git_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "git_mode": "100644",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/exporters/profiles/markdown.py",
+      "git_blob_sha": "f38e3ed473a379a53d7e6d06ccf18d26f2797a03",
+      "git_mode": "100644",
+      "size": 10172,
+      "sha256": "7c4f988d5ac767a2e14390b393db9856e9371b5fb28be30199c8393881b6a256"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/exporters/profiles/workbook_markdown.py",
+      "git_blob_sha": "173338e76f23f97cd7b0e23b1272d1c4ddb3bd7e",
+      "git_mode": "100644",
+      "size": 1696,
+      "sha256": "41d437dd0061771af5090792e8d2b9e9f421462474d7416b4b2e500614083d4a"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/exporters/rebuild.py",
+      "git_blob_sha": "b0b5b08fd94bc60fe02248d7aff5a41e33989856",
+      "git_mode": "100644",
+      "size": 8336,
+      "sha256": "dc93bb0fa34aa7110749ad009a198d11ba21c31998d302d30d76ae2c9d1fd3b6"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/exporters/set_export.py",
+      "git_blob_sha": "f3123236b2a6a324e5be4a06a0d6c2ce7b32fd70",
+      "git_mode": "100644",
+      "size": 11105,
+      "sha256": "60481717ae2c37f87b627b55fe6830364f24f44a5728976b42e408df231f4ba4"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/exporters/workbook_export.py",
+      "git_blob_sha": "c6d1f99bf5251a962f7cecfdb0adae41032b8546",
+      "git_mode": "100644",
+      "size": 6265,
+      "sha256": "f58b58ae76e6861abbeb0d317c6faee653d5cc0025b75e2e63e6add223574d0c"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/ingestion/__init__.py",
+      "git_blob_sha": "874129fb128475d8b01f926d6d1343198931dd96",
+      "git_mode": "100644",
+      "size": 73,
+      "sha256": "69e5bf9c1701bbf891653d6add00d07d98f8091428fe0acd608e37ab98573b6b"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/ingestion/asset_crops.py",
+      "git_blob_sha": "5fdea632f85d080529548ea77ae3bbf6a4cd108f",
+      "git_mode": "100644",
+      "size": 12310,
+      "sha256": "802b05966dce2845338c440e354c93a0cf066e3ea05c2053835b494d11b3f963"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/ingestion/curriculum.py",
+      "git_blob_sha": "bb46464175689cce6f66e8c587dc9f0a4ed77468",
+      "git_mode": "100644",
+      "size": 2347,
+      "sha256": "0d8b227ce3cb6e3c35de570c3ae7e2e83c3e63393610d93d49ff4e9af11d77a3"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/ingestion/formats/__init__.py",
+      "git_blob_sha": "2d90ba5022aeacfa845da11699f6a6641b530b9f",
+      "git_mode": "100644",
+      "size": 2371,
+      "sha256": "bf4ea5c76527ede04a7db6dc7d1efbda45bfe850138eed248d094a49d2bf8726"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/ingestion/formats/base.py",
+      "git_blob_sha": "88c0d5e624793f55f14af77b94d7c0db078c28ea",
+      "git_mode": "100644",
+      "size": 2306,
+      "sha256": "010cd56d37e28383228e226458c730a9722494c34984f68b505b590e8cc7ca93"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/ingestion/formats/ebsi_korean_explanation.py",
+      "git_blob_sha": "067a9c5a99951296a679c4625e2fcb4b71423123",
+      "git_mode": "100644",
+      "size": 202,
+      "sha256": "7cb40f5c5a39e6c11eb46dd6021d6ab98d9a94dccd007018ae57d298f419e0c8"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/ingestion/formats/english/__init__.py",
+      "git_blob_sha": "e1cec0430b72b43c813f51401dee07752e55f93d",
+      "git_mode": "100644",
+      "size": 35,
+      "sha256": "0000d169aaa314a4f5b947ba1e4e94575c23618719cb08757957ab2b8ddf8d08"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/ingestion/formats/english/kice_english.py",
+      "git_blob_sha": "54bb5f630be87fcc0bb80c22ebbb27dfb5be8c05",
+      "git_mode": "100644",
+      "size": 16758,
+      "sha256": "8d95153ee79a6eaf6aa7387df10e8f2db6ac2bfd782f524c5b43ce94d4d82bd5"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/ingestion/formats/hanwangi.py",
+      "git_blob_sha": "d8d286a3d33b27ca0217073b2b54011d2a07847e",
+      "git_mode": "100644",
+      "size": 136,
+      "sha256": "7d4fdd992579f895f6b0d39905ac0f6970595eac0f5bc7034f1c6f78449c3162"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/ingestion/formats/hanwangi_profile.py",
+      "git_blob_sha": "4117979ae3da5ae427e03101b578b1f2932fbd8f",
+      "git_mode": "100644",
+      "size": 139,
+      "sha256": "1ca5f5aa985fece2d8d2e30a492646594c767f04559e6b6ee4910e2a2a3338fb"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/ingestion/formats/kice_korean.py",
+      "git_blob_sha": "2011c02e29060c4a0df4ce5b281e608710337ade",
+      "git_mode": "100644",
+      "size": 204,
+      "sha256": "4565182e07502f13e89cb1cdb1e6516d006860b882ec56bf00263657d8e038ee"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/ingestion/formats/korean/__init__.py",
+      "git_blob_sha": "bbd0ba82d065a8a9d8f3cf3ffdce5efc4baaa2ee",
+      "git_mode": "100644",
+      "size": 289,
+      "sha256": "9a37b23d2d9ca9df1d351f4c6af94fa885aac4fa223ddb04854878eca47cb76b"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/ingestion/formats/korean/ebsi_korean_explanation.py",
+      "git_blob_sha": "aab859d24dc68d579028fd71803cc48fcfba9653",
+      "git_mode": "100644",
+      "size": 8897,
+      "sha256": "aa9bbbc103966a78a11514782abc0e26746556a5c64b90ea5d7d207cf28aae2b"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/ingestion/formats/korean/kice_korean.py",
+      "git_blob_sha": "efb29f11c6251cbdeaa8d778cb637419b8801f81",
+      "git_mode": "100644",
+      "size": 15047,
+      "sha256": "4b55c0ee7cc8cd1f60ad2a213d23c060e3b3c423c7bc6b570a3ccdcf5271c2c3"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/ingestion/formats/korean/korean_notes.py",
+      "git_blob_sha": "3448d3b8e6d1714c592b896455f23445838e1ced",
+      "git_mode": "100644",
+      "size": 7992,
+      "sha256": "9d8e9f5026748cfcbe64acd1845124030ce4de2e41f4ca4dc41e5f4fa5f49abe"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/ingestion/formats/korean_notes.py",
+      "git_blob_sha": "e4c823dfa7081bedfa254edb4f8cbcade66a1856",
+      "git_mode": "100644",
+      "size": 171,
+      "sha256": "d4e2136673975e380035db0125b4e23d2d1f5fac8af6589e16ebf41925166f28"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/ingestion/formats/math/__init__.py",
+      "git_blob_sha": "568b94f776607acb20e19cf608cc480b5eb02848",
+      "git_mode": "100644",
+      "size": 189,
+      "sha256": "22e78c07542d27f5516ea93f472f1a1f96b2c9c52546e2d5ab1ca1e0a05ef2f5"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/ingestion/formats/math/hanwangi.py",
+      "git_blob_sha": "6c30be74743bf33dcfa76caa4978539f15ac0c37",
+      "git_mode": "100644",
+      "size": 6580,
+      "sha256": "9c41d30756acfa16fc5046db46bc13c2e64566192cafc8b3cd97f6f838e9a9c5"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/ingestion/formats/math/hanwangi_profile.py",
+      "git_blob_sha": "94dbb8196a3d4100787ccc79ab58f588e00cf819",
+      "git_mode": "100644",
+      "size": 3590,
+      "sha256": "cf820c5d174b1e6d32ef23e66fed620e2c162fc9f579a68796471bed518d9857"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/ingestion/formats/math/workbook_layout.py",
+      "git_blob_sha": "b63bacce280843ab2ce44994f617192d6bc0e344",
+      "git_mode": "100644",
+      "size": 3435,
+      "sha256": "072fcb5626e69b84bb69ab648d5629d02d8766bbe06c1cf3562f38829a7b92d5"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/ingestion/formats/workbook_layout.py",
+      "git_blob_sha": "03643b7c7356e01338624d12942e736186205f43",
+      "git_mode": "100644",
+      "size": 183,
+      "sha256": "ef2cb954ce338f59de9c3e25d471895b5793cb6a41f0a87a1dd2a8f5ee4e6fad"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/ingestion/input_plan.py",
+      "git_blob_sha": "445ed079abea2a3d36c6f8b8429e0b049eb79807",
+      "git_mode": "100644",
+      "size": 8596,
+      "sha256": "0d2c42b84668c79fc174b869105d52b310054d4f5329c7025ed00eea94c05c02"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/ingestion/pdf_styles.py",
+      "git_blob_sha": "8d878b0b88ed2bc6891159e5827e7b2535c9911a",
+      "git_mode": "100644",
+      "size": 14946,
+      "sha256": "575cf3a656443c31f84a4aa361cd1098a733a6a95b18fd28c8fde4df38033ee2"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/ingestion/region_render.py",
+      "git_blob_sha": "32c8dad34244ed1ff825e2da382255c166ecc74f",
+      "git_mode": "100644",
+      "size": 421,
+      "sha256": "440c2b3bcdcd25804d5e5d9af248a34a75ae448fa0f991c8b7ae1daca30d6e1b"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/ingestion/scan_anchors.py",
+      "git_blob_sha": "d846d351fdc0c777df89f9fdd6d49bff813b9956",
+      "git_mode": "100644",
+      "size": 3168,
+      "sha256": "a794d9ea988c4f5a49da4d881531fd7ea7d2b85518c564921d326806e4f0a7bc"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/ingestion/study_markdown.py",
+      "git_blob_sha": "bf94b9c9e1f2772c130b6e6c8f5e6e1848d4f5ba",
+      "git_mode": "100644",
+      "size": 2859,
+      "sha256": "1f857cf1ce173b17e822d2e5e7e5eb85d31f6abf68f52b4398f190b34f14f82b"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/ingestion/study_revision.py",
+      "git_blob_sha": "6a51f29c37685ffd50c6a8f31d82910b30323a1c",
+      "git_mode": "100644",
+      "size": 14738,
+      "sha256": "987ad6bd62b8a9def998e76c86ebf7b990d77ebaeb59728246b528e4b47f42e0"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/ingestion/study_service.py",
+      "git_blob_sha": "08d74f550c6173471d547448abd4248c6177aa7b",
+      "git_mode": "100644",
+      "size": 12722,
+      "sha256": "7ab523c1e84487d2bea93465d654a4307e8f166ad7c2c58de066998bd4f08d32"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/launcher.py",
+      "git_blob_sha": "ff90d724c1ae977ae0651c83187bed7cffd60c51",
+      "git_mode": "100644",
+      "size": 6174,
+      "sha256": "b89a3c866f9d2b7cfe923fa51081a7496d0953e6a82a042c6aff9f94ce032a0c"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/models.py",
+      "git_blob_sha": "a6b56137326278b5fd54e79ba4930972bf78ff3d",
+      "git_mode": "100644",
+      "size": 87,
+      "sha256": "061db404a35fdf5e6b643944cec33af941a5af87a300a6dc6fccfdbfc45be961"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/output_profiles/__init__.py",
+      "git_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "git_mode": "100644",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/output_profiles/markdown.py",
+      "git_blob_sha": "ee490a59e3a06921e57f331601c3ebcdbff4ce11",
+      "git_mode": "100644",
+      "size": 105,
+      "sha256": "b1fe12daaec8c0befd0684b2f09588837719f23c41a684fda51189e12884caf6"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/pipeline/__init__.py",
+      "git_blob_sha": "fbbadec6a2e0950678c5256cbf3f1e0898276980",
+      "git_mode": "100644",
+      "size": 870,
+      "sha256": "bafa31620d3617688026109172a654fbb91cd40a3765f9469896ef0492bb2cd5"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/pipeline/ai.py",
+      "git_blob_sha": "a305b10ea20e0f6f907d9450b7d720e61f833664",
+      "git_mode": "100644",
+      "size": 36611,
+      "sha256": "e5efea896e42cccb545689d7fe74be5d75694b215f2ea32127000008826aded3"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/pipeline/ai_activity.py",
+      "git_blob_sha": "9e47477e0c3c22eaac7d031d13982393bc0c1dc0",
+      "git_mode": "100644",
+      "size": 2115,
+      "sha256": "55801a35d2292bb883be8b23e6f3385109d0c5589e0b58ee7581207e9fa1da49"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/pipeline/ai_worker.py",
+      "git_blob_sha": "d18a26ae5be9f34cafc63265102c2cea45f476cc",
+      "git_mode": "100644",
+      "size": 10250,
+      "sha256": "7f51d7e6c4c78ae2942682de90cdf0a629d1bcf75caed6e004126c3a5208c7ae"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/pipeline/concept_extract.py",
+      "git_blob_sha": "58430eac9560ae3c51ea5ce38bbd8ff1b53e7917",
+      "git_mode": "100644",
+      "size": 2423,
+      "sha256": "984440623e5e45dd25219de4f867cefeec94b01a956805cc8366c81609d384b7"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/pipeline/review_cycle.py",
+      "git_blob_sha": "7524bce0b6ca065d983ec2647a4a00328b379d62",
+      "git_mode": "100644",
+      "size": 7592,
+      "sha256": "7f92ef3706a0d0c57f76b620adc29cffe6c5237888414b5ab9995d895009893c"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/pipeline/subject_settings.py",
+      "git_blob_sha": "440ecab745dd70aad066d0e62ddbf29e0f8f4882",
+      "git_mode": "100644",
+      "size": 1830,
+      "sha256": "f5ea18fcd553c119a525f6bdc743b549fc9d718a5a3f78c2e953fbed60deb3fd"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/pipeline/work_queue.py",
+      "git_blob_sha": "f313a782731337e3e7031b35a72652cb8b4ddb8c",
+      "git_mode": "100644",
+      "size": 13489,
+      "sha256": "3f60f5741bd28eb28fec5138ca38b12ba0581331ac52ce60516ed338fd3dc135"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/pipeline/workbook.py",
+      "git_blob_sha": "d076b28b26d9c0b399727e40b4ba9855b67b3b0a",
+      "git_mode": "100644",
+      "size": 13871,
+      "sha256": "12620d417a63379c70ceed68589d8f98c756eaeb5c1a8bbcbd3814bde4dbc04d"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/rich_content.py",
+      "git_blob_sha": "2827744bf32272abc4fa166aeef17c256bf8b6b7",
+      "git_mode": "100644",
+      "size": 2275,
+      "sha256": "3ef71138f992be2e9e752790a2a0ae1275473f54882995380bc372d3d5ac6484"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/scripts/hanwangi_sample_layout.py",
+      "git_blob_sha": "ff503580811e7c74b5d85017c50798a0a73b762b",
+      "git_mode": "100644",
+      "size": 6021,
+      "sha256": "d70a3241bdc3a9842adc84bad25e5ce8f1143c9f6216ba6916a3df782b13ff81"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/scripts/ks_flatten.py",
+      "git_blob_sha": "f6ce1697d9a17b1135ac76ba859d75d46d187873",
+      "git_mode": "100644",
+      "size": 44080,
+      "sha256": "f98368b2e1d4d7d3a38a08013237be1fbe371a1485db3283c88ed4a4dd819cdc"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/scripts/verify_docs.py",
+      "git_blob_sha": "54980488ebc9169c903f8cca2eecd83f340d84e0",
+      "git_mode": "100644",
+      "size": 12215,
+      "sha256": "0eb2215482ed2cd721f8f4f1900e4a319f6c533d70a5fb7df3038b42eb4d247a"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/scripts/verify_export.py",
+      "git_blob_sha": "382d98e72cdade031349f20eb44d7ff3e0908e46",
+      "git_mode": "100644",
+      "size": 6523,
+      "sha256": "a40c78ae7b230d93ffee201f1d8001aed568700193d35670bb66595703be7740"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/scripts/verify_study_ingestion.py",
+      "git_blob_sha": "40275f6ef7467ba474df0dd79ccf11bcaa08f6d0",
+      "git_mode": "100644",
+      "size": 5131,
+      "sha256": "c9f3fab50132d356adfe927ccdc01b58d14fbd8cfb2cdd1283a06fb0cbbab80b"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/scripts/verify_study_revision.py",
+      "git_blob_sha": "6cccd387899ea3b0a92c35e2581dc42e125a2183",
+      "git_mode": "100644",
+      "size": 8972,
+      "sha256": "f9709dce0bf236f78432953ca529fd955577d4a855db79ec1ae5773b4a014e7e"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/scripts/workbook.py",
+      "git_blob_sha": "895f2d4512c0f33750318e9fbe06d0df301a3fe6",
+      "git_mode": "100644",
+      "size": 3819,
+      "sha256": "b5407e56ad9842d9b7ce4582da286e62460f2935aa29c0d6ab34d911e702e613"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/scripts/workbook_materialize_concepts.py",
+      "git_blob_sha": "48b9ef84a8c7fc827d13035d59448ea47be978cc",
+      "git_mode": "100644",
+      "size": 2642,
+      "sha256": "35550da413f30a79ead6ef9931eb7cce628cf35c2f3c3a0c5fcefe3dbe154fc2"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/scripts/workbook_reapply_diagram_crops.py",
+      "git_blob_sha": "80f3e7794cfaeda71bc1a02d2c51ca0cf317fd1e",
+      "git_mode": "100644",
+      "size": 2335,
+      "sha256": "0219997ed173fa1388229343628b9e14e710657870721714020ed4a788e5087b"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/scripts/workbook_reset_scope.py",
+      "git_blob_sha": "5d06a86f470dfe76eb27ff17ceff48f5f101b0b8",
+      "git_mode": "100644",
+      "size": 4673,
+      "sha256": "edd95b32fed8f9df7cd3a699aeefbc5d6ad5c04800e41806592cf0efc2f7981d"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/scripts/workbook_sample_run.py",
+      "git_blob_sha": "9618fb5fe71bf8a117d596cbc47e373812f07f20",
+      "git_mode": "100644",
+      "size": 4771,
+      "sha256": "d59ded4f03ebefbec8497dc22bd5ec6acd627a1172c6109e04fb341e9710f864"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/scripts/workbook_scope_status.py",
+      "git_blob_sha": "7189fdda4de473d433d656de44f09ab86c5d856e",
+      "git_mode": "100644",
+      "size": 1728,
+      "sha256": "7c3f6515b88f363056c167092e3e442b3d8c6ebc2606d0631b20525d0194269a"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/server.py",
+      "git_blob_sha": "b7c79bf2b47be8271c1267074a4309223dcfaed6",
+      "git_mode": "100644",
+      "size": 21956,
+      "sha256": "c83e3f739eefdcf5fd03f44b544df587027565d97557448e462c0ee2078e1e7e"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/set_export.py",
+      "git_blob_sha": "fbb0de438f2aa0cd42b0a133d3ccd6165f4abdbf",
+      "git_mode": "100644",
+      "size": 80,
+      "sha256": "5fbedc5a7994a408162bf3c96123a13d38d3b2f05fc7c1b47e9df32c33a96ff4"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/storage/__init__.py",
+      "git_blob_sha": "2c92dd095572c74830e79d55b6fffaaf9deee03e",
+      "git_mode": "100644",
+      "size": 663,
+      "sha256": "94ef3b811c77bd454c7646014e7d55ee907689252fbfaa2d880fd056b161ad2f"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/storage/batch_jobs.py",
+      "git_blob_sha": "6329551b68a61edc2a307c74a28d0a2273c173b8",
+      "git_mode": "100644",
+      "size": 20910,
+      "sha256": "9d33641c77d38b9acecb4a35f611b3239175c7272b021e7b7a35fe6be16f50c6"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/storage/boundary.py",
+      "git_blob_sha": "62bd8d964c81efc23432d27bcaa193c71137f2a0",
+      "git_mode": "100644",
+      "size": 1057,
+      "sha256": "039f11fd1e2dba7d1026cc1fe487555b550dd0b8482ad929b020023e81ced928"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/storage/bulk_approval.py",
+      "git_blob_sha": "82ca257b176f32fc0fd228d429bc92d85968e333",
+      "git_mode": "100644",
+      "size": 19441,
+      "sha256": "9ada800db40d71fdb12a7452f057e27c09484cf2d28b78a38b8909ce31c80647"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/storage/ephemeral_views.py",
+      "git_blob_sha": "1054c8de29d160977f7a6304b314a3338c32e1f3",
+      "git_mode": "100644",
+      "size": 16867,
+      "sha256": "b78b87324fbc7b58e9c033102a953ca236788df3f6520dfef90be4f387f97c2f"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/storage/evaluation.py",
+      "git_blob_sha": "1f4d88a4c6d04976717515062ede97569d7cedb4",
+      "git_mode": "100644",
+      "size": 27545,
+      "sha256": "dd1ca73a528ecf8ad4e3279219ea4433671dc76419c8debb183434d36239c0e4"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/storage/focused_transaction.py",
+      "git_blob_sha": "6ea90c228d6b95f5461f611ddd2d2fb8fcb27c13",
+      "git_mode": "100644",
+      "size": 1066,
+      "sha256": "fac0a352dc102701e828d10e4ab97259d25880fa0333ee28414036b0f6af64a2"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/storage/input_jobs.py",
+      "git_blob_sha": "b41c8ce778ab07d85f61d2bf1dce1b0c4200da38",
+      "git_mode": "100644",
+      "size": 19869,
+      "sha256": "472383948ad0b0810dcd48274d14f840985f3ad866d4dd6927af43069add89f1"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/storage/job_repository.py",
+      "git_blob_sha": "215b0f9004b792005f462744a1428643224222f6",
+      "git_mode": "100644",
+      "size": 1008,
+      "sha256": "417339c1a516513be6ed1ce75306824484d3a7d08093579ba28f057f0589e2c3"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/storage/job_runtime_repository.py",
+      "git_blob_sha": "3e1cf57f2cb83e887326e1a61f537c30a6d026b8",
+      "git_mode": "100644",
+      "size": 1317,
+      "sha256": "f446027bb27db48e96470402db7e106bbd96af6012e4115f7edd8b3e4fc8a8cc"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/storage/json_io.py",
+      "git_blob_sha": "a69344c8aa66049497f9bcb1be8f7b3fb4c4cdea",
+      "git_mode": "100644",
+      "size": 645,
+      "sha256": "4c5237729d3833e0868b4b0249e4bcc1fa7d55e58efe3c52f40057148c11ad64"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/storage/migration.py",
+      "git_blob_sha": "4e66415c10367b77b8a91113f8fc50b599f00be7",
+      "git_mode": "100644",
+      "size": 4783,
+      "sha256": "860094a284b0a176cfaea1f29ccc4188c6bfc0a1012744f6e9690f90bb138c35"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/storage/offline_evaluation.py",
+      "git_blob_sha": "4698cf0e08405d84a747daf4c535b135e8704c79",
+      "git_mode": "100644",
+      "size": 18230,
+      "sha256": "d04d2c8a6467a0d3a7d1db6bf2cde72091ff9e9f4c7e7bd2cd210521b91a5d82"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/storage/record_repository.py",
+      "git_blob_sha": "28b2bfe629f36abb73e952e148e5762f6edcde26",
+      "git_mode": "100644",
+      "size": 2253,
+      "sha256": "10e9a6936815b5b99e4d364ad1b828f52f3b73ccc3d086df9728012e7634a744"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/storage/review_repository.py",
+      "git_blob_sha": "cb90fc3f72364dbca34587bc67f76e0793b3134f",
+      "git_mode": "100644",
+      "size": 2046,
+      "sha256": "b713f22db5b8562e3e5edd5742240650775ca987fefb142035392c908015608d"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/storage/revision_repository.py",
+      "git_blob_sha": "c8374e5d9aed6e1fb8eeef3bebc9bba49722c38b",
+      "git_mode": "100644",
+      "size": 2366,
+      "sha256": "ce88d47620c42e82305dec88f6954935d76478634aafeee5cb1a7c5d06270d53"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/storage/sample_review.py",
+      "git_blob_sha": "9f074634064d054ddd0c2dc42a756d4f9849f2d2",
+      "git_mode": "100644",
+      "size": 13109,
+      "sha256": "303f562f05778c4da801e8ea47c2f3b18facc9eaa6c320ef1704f47aecaf4518"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/storage/store.py",
+      "git_blob_sha": "8c9c7e0783b0b66f11839f7535cf23fc949ddb6b",
+      "git_mode": "100644",
+      "size": 70304,
+      "sha256": "d8c738c5ab18c40b224fdf2bbb59d2cc68fd1fd155b7622056490d86d974498a"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/storage/vault.py",
+      "git_blob_sha": "c723d5ec1b8644d60fcf3f53a02d0cc8516bf62f",
+      "git_mode": "100644",
+      "size": 1259,
+      "sha256": "b06a155656560e512bd6c77f35e3cc0b04c32aba4e2d9f949b4e1fa1d969bf8f"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/store.py",
+      "git_blob_sha": "0167f8a01883e1faa37ccf8ff5e18111c6a59eb1",
+      "git_mode": "100644",
+      "size": 70,
+      "sha256": "ced432acd566c4d430d48e7da6eda318dc9b5bfd6d5b50cb95d0116b1034126a"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/subject_settings.py",
+      "git_blob_sha": "a477c0f6986d82b4b4b07b2b9dc40adfa61d8cc6",
+      "git_mode": "100644",
+      "size": 163,
+      "sha256": "005ebf6de5c32a0027bad6aaaca5cdef3d3163f4b43fe6fb09f17a848de0cc92"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/tests/__init__.py",
+      "git_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "git_mode": "100644",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/tests/batch_jobs_fixture.py",
+      "git_blob_sha": "a9981317345829e4df492ac3e5b8c2cbf995e9bb",
+      "git_mode": "100644",
+      "size": 2020,
+      "sha256": "94efd863a9755a367db250efad6ee03d33f7a24a4a12fe0ac6e876a5f71229ce"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/tests/bulk_fixture.py",
+      "git_blob_sha": "153ef5b9fc6ccf7bb08f98a98e9286c391050e4c",
+      "git_mode": "100644",
+      "size": 974,
+      "sha256": "12749d4531040cdc2e4561696dae47df4f9681489354adf27df33d079aad2f9b"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/tests/evaluation_fixture.py",
+      "git_blob_sha": "1feab42d0234697bb8870b217103889b84dd4494",
+      "git_mode": "100644",
+      "size": 864,
+      "sha256": "3c7f313b3ad2f5841a2ac932e21463d3061445e095077bdd7e048fcf7a8398b3"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/tests/focused_fixture.py",
+      "git_blob_sha": "322fc65fa48845f9d16d97364047a2174fd5b41f",
+      "git_mode": "100644",
+      "size": 2834,
+      "sha256": "f9e2cc5f095360070852d1bb1a7b8d0159e6152000e5445d90af05e1dd55bd80"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/tests/input_jobs_fixture.py",
+      "git_blob_sha": "4a04131e5ff31e0dacc40059e47eb64a957ca8ad",
+      "git_mode": "100644",
+      "size": 2693,
+      "sha256": "6a63a958d97491a933d3d0e503e5e1404eb0457376e915aa71e8d4389397321c"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/tests/offline_fixture.py",
+      "git_blob_sha": "2386a8c8600fedd07c9970f7ce10c595c10b6e56",
+      "git_mode": "100644",
+      "size": 2369,
+      "sha256": "999387d28b956fee27bfcef391971c495ff68c55f01bb9902fd608bd5106d1b4"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/tests/sample_fixture.py",
+      "git_blob_sha": "ffff407bc80ef2131b1ce87049679a746ccad768",
+      "git_mode": "100644",
+      "size": 2076,
+      "sha256": "352ebf1e821a69c06c36d51bce5d880c3c386cfcaa8fb04016aa8de24c554460"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/tests/test_ai_activity.py",
+      "git_blob_sha": "49d55ed7e39565257868ff9022e6287fd5990f24",
+      "git_mode": "100644",
+      "size": 1381,
+      "sha256": "5ba2be7f74b9765718cd591ecb1c9d6b4c37cf3526a0cafc7d028334abb8fa07"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/tests/test_asset_export.py",
+      "git_blob_sha": "844be69d56019a5e09918571b23b1c8252b7b863",
+      "git_mode": "100644",
+      "size": 14903,
+      "sha256": "9cca672facdd8898e9e0659faa4f42a791302eacd72a4150911f208b73e2180a"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/tests/test_batch_jobs.py",
+      "git_blob_sha": "e78bf9a7770dfa6a9c62f5f12493a893ff13e83a",
+      "git_mode": "100644",
+      "size": 15089,
+      "sha256": "19a6cf88e8da048d641c49f078bea6ed22620ed218f1b752c62197f79145bbed"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/tests/test_bulk_approval.py",
+      "git_blob_sha": "7e14f85a2a1c8f6d02d82f382b48d488543a5eec",
+      "git_mode": "100644",
+      "size": 20134,
+      "sha256": "6df59aeab88a2547e3dac0a6f7e6cfe21a46ca582cc1c21102168e8f80ac2502"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/tests/test_canonical.py",
+      "git_blob_sha": "ef7e73ca9a545391f340c1d235363c83b48a1d6e",
+      "git_mode": "100644",
+      "size": 39837,
+      "sha256": "a51e25022c4cf9fb4858c69a0ce85d6b3cd2330be82ba6d5c3a55650db2fb986"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/tests/test_concept_extract.py",
+      "git_blob_sha": "25d9c92bafd9d1acb837450f15a370b18f838211",
+      "git_mode": "100644",
+      "size": 1453,
+      "sha256": "5d4d8534ed024cdd5856205b7f8c8661e54f7c4d1af0bd7180a445afe280d317"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/tests/test_core.py",
+      "git_blob_sha": "8d639b9d80b0c7f4e6f4378dd8b000f42bdec045",
+      "git_mode": "100644",
+      "size": 44130,
+      "sha256": "15307068b256856b429f93bf0d557c368ffd223b0ddd60a0ee168f519b63d5d5"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/tests/test_core_cutover.py",
+      "git_blob_sha": "5731f46c1d820a5435bc7368fd393611839980d7",
+      "git_mode": "100644",
+      "size": 4616,
+      "sha256": "fcbc4260d98d4d5365638edf660989385f363a34777e9da020abeb320485c3ea"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/tests/test_curriculum.py",
+      "git_blob_sha": "1421eae50d3d68fc6bce21432f327bdc509d630e",
+      "git_mode": "100644",
+      "size": 1708,
+      "sha256": "19741fd779d24da90a7b2359258c7e7962adf014390a9b876e462e7a01c22f63"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/tests/test_docs_inventory.py",
+      "git_blob_sha": "ee5a3d3c84b79346cacb91b5bcd1535291a773cb",
+      "git_mode": "100644",
+      "size": 3553,
+      "sha256": "77bdff2c0b6eb918e9e324369497f493e902b8e030095137f5af02dcf13037cb"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/tests/test_ebsi_explanation.py",
+      "git_blob_sha": "667a75abf143c79b28eb6d1e80a7de5d095fbcc7",
+      "git_mode": "100644",
+      "size": 3966,
+      "sha256": "93502f3000571929ee33d3fc6d45242e3543d7a1c7fe9927134297b7d690d000"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/tests/test_english.py",
+      "git_blob_sha": "d4203ac6e4829bdff9b802a422d6def4d23098d1",
+      "git_mode": "100644",
+      "size": 14757,
+      "sha256": "86ca35bf50c6ad8fe19e6f984057be2146611e1725933314ba83843b690337c7"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/tests/test_ephemeral_views.py",
+      "git_blob_sha": "c5d420cf672c7de773c8887c0ac795e058e4fa85",
+      "git_mode": "100644",
+      "size": 10764,
+      "sha256": "c2bfce77af339546bfc2825155eb630144049d3a430da9d0e13b266dc21cd353"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/tests/test_evaluation.py",
+      "git_blob_sha": "bd880aab63e241d763c16b6a8d5b6e2f6d6bce40",
+      "git_mode": "100644",
+      "size": 19560,
+      "sha256": "0468142d80fdca8c824fd97d81561e80e77223f52bd262349f07cb31b6dbb236"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/tests/test_exam_scheme_resolver.py",
+      "git_blob_sha": "9d5e4bdbc81b21038f512fbce1b7874b2559a046",
+      "git_mode": "100644",
+      "size": 4770,
+      "sha256": "e172701887db189f5f277312bf3e929df61694239736ba9d622b015ffaeb67ed"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/tests/test_focused_review.py",
+      "git_blob_sha": "29fabf61c43ee146d4d95030024423856dd0b106",
+      "git_mode": "100644",
+      "size": 9536,
+      "sha256": "c7b433801a05f160481b88f205fd9a1895249b1e95a59bb5f7ad362d66465638"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/tests/test_input_jobs.py",
+      "git_blob_sha": "f1b294d774dcc2f9b2721f97dbf04bd135e0f57c",
+      "git_mode": "100644",
+      "size": 18876,
+      "sha256": "6da153ad7e5e04684cfca03f1237df2a08fb7c8acffbbd6c925e4b5afbb848e7"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/tests/test_job_migration.py",
+      "git_blob_sha": "17b390c27bc0026e18f40821f07131703ba1d5f9",
+      "git_mode": "100644",
+      "size": 5319,
+      "sha256": "16536904af3aa4605fd1995a31ac5d4625d3a9756531a788eff73da23944ea6d"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/tests/test_kice_reflow_runtime.py",
+      "git_blob_sha": "1520b28cd7bd45ae9bd5a9e50cc23eb6d449281b",
+      "git_mode": "100644",
+      "size": 1799,
+      "sha256": "e4dfe403f901037dfac1ea6527577c94d5996f3fed6d5fe64f3ecb56d509e009"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/tests/test_ks_flatten.py",
+      "git_blob_sha": "13500ac82d2b459dfb5cb36aee7d758ffb6e2bf5",
+      "git_mode": "100644",
+      "size": 11843,
+      "sha256": "fceb009fcc7c569e85d65c9f8b66fd6fd575c7aeb83a31478d11dec95cd2bc00"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/tests/test_launcher.py",
+      "git_blob_sha": "68ab265149ea365e9299078d7f64d0b359fb8f69",
+      "git_mode": "100644",
+      "size": 4026,
+      "sha256": "0f71b9affc2085dcbb5f59ede97bb522bbc2f84d37d7676db252431cd0f83c20"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/tests/test_legacy_review_projection.py",
+      "git_blob_sha": "01492cf7aa44ce83ea43e2cc0498b7cc4ebd6052",
+      "git_mode": "100644",
+      "size": 5753,
+      "sha256": "698defc7c09adda47febd172bd171d1b8403c296c6216bc406d9b1d3bb75a07d"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/tests/test_math_quality.py",
+      "git_blob_sha": "7b6ff01d2b6afe1ca82756953a9874d8677974b9",
+      "git_mode": "100644",
+      "size": 1994,
+      "sha256": "16fa84fab278319028864fc3161642c0b64cb2302af6e7ab8e1a4ef958ca7c2d"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/tests/test_offline_evaluation.py",
+      "git_blob_sha": "1b7a30ab736baa0c3e6964ac3f37bd587fe02246",
+      "git_mode": "100644",
+      "size": 15188,
+      "sha256": "772afd8be44c29820ff21c515c23ffb13550870a777b823a7a82837b645376d4"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/tests/test_p2a_kice_master.py",
+      "git_blob_sha": "0475fe0bb4fc9f52ba713727f9562b1e7715fd00",
+      "git_mode": "100644",
+      "size": 12243,
+      "sha256": "69a71322adec86bf545cff767978bdf14642a9cbdfbdceee56a0f8b15f6ed876"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/tests/test_p2b_relations_and_aggregate.py",
+      "git_blob_sha": "28346c7079f1e04207c37aff78e9d0c5b6e660d3",
+      "git_mode": "100644",
+      "size": 14293,
+      "sha256": "287310fa48cea5a3f45bfc741610af14ca6115f377484821bd7bb8ecfc668ce0"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/tests/test_p2c_ks_scanner_and_artifacts.py",
+      "git_blob_sha": "ccfa896449b2fb379af2f0274ef98e94f573c031",
+      "git_mode": "100644",
+      "size": 12536,
+      "sha256": "b6bce30ec126850a5b12044d693981835c5d2c337c9afc95674fc40a45c0bfa3"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/tests/test_p2d_evidence_matcher.py",
+      "git_blob_sha": "ab628d0ca763ad33e927eb9885583b42f62c15ba",
+      "git_mode": "100644",
+      "size": 15187,
+      "sha256": "05adfbbd666b028fa8a3b6b8f1f7642c8adc5dac2d247fc424bb8df589162fca"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/tests/test_record_repository.py",
+      "git_blob_sha": "a73ff73c2fea9f276a9ba6a0e4cb9cddf98ee270",
+      "git_mode": "100644",
+      "size": 2930,
+      "sha256": "889775f7affcae0ef75111fdae543ff1388da0c5360976089bc3df829067c5fe"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/tests/test_references.py",
+      "git_blob_sha": "5257ce7a67044266916efb8270c2743bba726917",
+      "git_mode": "100644",
+      "size": 3300,
+      "sha256": "5bb0ddfe9cf91c247baa371d1987dbb23842fa08f4d1af7797b99a9dc2f0df1a"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/tests/test_review_cycle.py",
+      "git_blob_sha": "ee428cdabe2ae766b8051fa31f99c4486f93da40",
+      "git_mode": "100644",
+      "size": 4538,
+      "sha256": "3cf29a1d237e6cbf7834023cf72138d155fc45c02d14018b19618dad72aad0b7"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/tests/test_review_decision.py",
+      "git_blob_sha": "6aad0da8fbe2957d1890990fa5d274cdb6a6d391",
+      "git_mode": "100644",
+      "size": 14750,
+      "sha256": "d0fd1abfcff1cc3291609dc25b7837b0e14dd52768a9b6b1e9f181ca8fed50cf"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/tests/test_review_regressions.py",
+      "git_blob_sha": "6b523fafbcbfeff7718434fdace6ceede5c3a093",
+      "git_mode": "100644",
+      "size": 14004,
+      "sha256": "fde3caff9b4416501b3a282e85eca79a067a09db3fcea430e616519995d0563f"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/tests/test_review_repository.py",
+      "git_blob_sha": "bdf7efa0bab2a399e4d011eee6d66c7a3c883bbf",
+      "git_mode": "100644",
+      "size": 3335,
+      "sha256": "296e3003ace003dca25ed1160f9385398af61751eb95e36f86b871dfd8589b44"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/tests/test_revision_repository.py",
+      "git_blob_sha": "4fbbe278cd9d0e47b574c0bbc03942d6e03d0c3a",
+      "git_mode": "100644",
+      "size": 2117,
+      "sha256": "bddb5266ee8699d69a0ca6d38d5ff09168bd223722136d84f9f3140de0255a44"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/tests/test_rich_content.py",
+      "git_blob_sha": "01a73f525b1ca7733e5ece9c364fe41c766b6171",
+      "git_mode": "100644",
+      "size": 8338,
+      "sha256": "b0e76c40eda2a62440c1de2c731a10d1af0042f1e7377f958e4ee2138602aa23"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/tests/test_runtime_view_parity.py",
+      "git_blob_sha": "a4606014e9540e1168f67e523e5e4835526b14f9",
+      "git_mode": "100644",
+      "size": 17211,
+      "sha256": "1e0790c43c68062aecf09a73e2f1eeddb69ea45758b58d4e54f56ecd7ac26ce9"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/tests/test_sample_review.py",
+      "git_blob_sha": "c6e473cf50f758c7a2bc7396436dceda1fda6b4a",
+      "git_mode": "100644",
+      "size": 12394,
+      "sha256": "821be284348c12e7f1e20bd7efafbe08e00b498c51de72228a921ef7f3c821bc"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/tests/test_standard_content.py",
+      "git_blob_sha": "64d29b4fec3f37c21f7a48c33b447091e6ea2b36",
+      "git_mode": "100644",
+      "size": 7638,
+      "sha256": "d576b5474197a0ff5a15e89c4a5919e1f6e8f696e08db1170b233f12c18f4991"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/tests/test_study_ingestion.py",
+      "git_blob_sha": "2849be2a11c47aa78356d0b6727a9373f6192906",
+      "git_mode": "100644",
+      "size": 5803,
+      "sha256": "0f976cbe7e555712ca73d04741f078d4d0eefe4744568e4aaab62ca6b831a96e"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/tests/test_study_revision.py",
+      "git_blob_sha": "cdc46982e8dd35d44ba009d4b1abb0b66b36973f",
+      "git_mode": "100644",
+      "size": 11990,
+      "sha256": "afc8abe1ab6a5e664666d0cd23826e11c7765c3f7bae61af76ec7c84996af622"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/tests/test_text_layout.py",
+      "git_blob_sha": "881a0333d2c4d3d3c676997b1416be5935d10347",
+      "git_mode": "100644",
+      "size": 3254,
+      "sha256": "73d0912ffbd5eaf79f2cb0c5c81e05bb8a57635cc1171f9a580a00a2a83a81ac"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/tests/test_ux_flow.py",
+      "git_blob_sha": "c4dcc96de56c27e929dfd6f4e64be5c2bb601851",
+      "git_mode": "100644",
+      "size": 8289,
+      "sha256": "6395791a959f32f132a0c4aad0dbcb626df22c8ff9366e77dc4805f4cef9c5b0"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/tests/test_workbook.py",
+      "git_blob_sha": "4e11561dd605e9ffe26d19028e8f7d7de29c5a02",
+      "git_mode": "100644",
+      "size": 20943,
+      "sha256": "49a1a00a0f65efd8261c8b8c68162a13c22990c20f514d8043e03b6922c4ecd8"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/tests/test_workflow.py",
+      "git_blob_sha": "89256b7d8c9831fd1d43690d00c4760fb7331a30",
+      "git_mode": "100644",
+      "size": 8622,
+      "sha256": "ece739b43bfdea9883ae0c5569281267aa034b72ea610df27650d301aa39dda7"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/text_layout.py",
+      "git_blob_sha": "60986b337a69a560c4fab2799187b287fb8f52e5",
+      "git_mode": "100644",
+      "size": 4001,
+      "sha256": "35d7ad6b02d12db6d6fdff8ee01ff24c5a82660ab64962e38bb3188daf69e6f7"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/vault.py",
+      "git_blob_sha": "f50f7b3f32c1a536e1db776b07ede5ecb8135b52",
+      "git_mode": "100644",
+      "size": 75,
+      "sha256": "6bf8c07664f300b9609f455fe35dd0dd02005df8f248e8e996b8270e315f0a7e"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/work_queue.py",
+      "git_blob_sha": "bf0dc79bb214c5f6fb2327a5f09aea686f88fd79",
+      "git_mode": "100644",
+      "size": 84,
+      "sha256": "b119486250dd869cbfab16b353effaff790a640fce5be8aabade03fb42bae779"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/workbook.py",
+      "git_blob_sha": "4612aff861f79e957caa9a9c097d6cc4da9242e8",
+      "git_mode": "100644",
+      "size": 86,
+      "sha256": "f2507e21689422af468eb5755041b6ff4a6c4e6b8e53ba96d21ef4ff0b823687"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/workbook_export.py",
+      "git_blob_sha": "23a8522413d2ecd0e35d55cfa2ed3d4eb4709859",
+      "git_mode": "100644",
+      "size": 90,
+      "sha256": "05217319e99cc27d2a56b0d6bd00fe4ddb58958851ef48fb22e397097cb571ae"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/.gitignore",
+      "git_blob_sha": "c2658d7d1b31848c3b71960543cb0368e56cd4c7",
+      "git_mode": "100644",
+      "size": 14,
+      "sha256": "4d56952b0fb13bf8f9b6c13a6d4c34a075bac3af447636a1df4335d7576e2f97"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/dev.sh",
+      "git_blob_sha": "7f31de611c7df385ae99662d3d0681b5e63332bf",
+      "git_mode": "100755",
+      "size": 817,
+      "sha256": "ac014610252f034eea3024b02cf40c1deaa602c925a5763e316929b0d944dd38"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/launch.sh",
+      "git_blob_sha": "628415e354b22e719c118e0714acb8922da1703c",
+      "git_mode": "100755",
+      "size": 298,
+      "sha256": "c646ceb795d480704dc27ad518eab7bb247a825cc8a25e9b061a1dab19876502"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/package.json",
+      "git_blob_sha": "27c2aab118abaa409024d6b15905e5f89b6190cc",
+      "git_mode": "100644",
+      "size": 258,
+      "sha256": "b24a959ce48f0f32320c79bdb87988baa868c47308d2d24f0c955bdc25a13082"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/requirements.txt",
+      "git_blob_sha": "a971404bc00ae09888fdb18f223ad9197a5f052c",
+      "git_mode": "100644",
+      "size": 73,
+      "sha256": "234ef65894ee50429af1ab6ad96c4f45018ea98b5c88ec50377ce2f2dcb0c9b3"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/run.sh",
+      "git_blob_sha": "8e4c2eec7f29fd0200f879cad3b1fff03a16e416",
+      "git_mode": "100755",
+      "size": 215,
+      "sha256": "dc9a4d4589c55c900eaedbabea752b1c3c9c58c6c12df70da401ce895298e387"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/scripts/docs_inventory.json",
+      "git_blob_sha": "fa24092bdccb6d07584f46d51a2e32ede77e9adf",
+      "git_mode": "100644",
+      "size": 8828,
+      "sha256": "0d9b800a788762ad3642918c673f2235777141b1d2dcfedef5932384ed6bc499"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/static/app.js",
+      "git_blob_sha": "1174b45d742d31840c65edaa0f124760a436ed95",
+      "git_mode": "100644",
+      "size": 67325,
+      "sha256": "bc9a8bdd61a3a005e3e0a020d52e558a2ea3822293e9d56f1dc22bd76ad61408"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/static/batch_jobs.js",
+      "git_blob_sha": "dff6442948895ca8fc327d6f1ee32ee2ed606bfe",
+      "git_mode": "100644",
+      "size": 19171,
+      "sha256": "37d36cb8366679911db530bdc81c3aa3f02bab598ecd5ec12bedfdb38bfdf66c"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/static/bulk-approval.js",
+      "git_blob_sha": "2acf354f4d9edc101719b5ceb94390aea3e387d4",
+      "git_mode": "100644",
+      "size": 7815,
+      "sha256": "1c20da9bb030269b480014279a51b3ac07f9f917688c9f84bf4a6dd55d0c8ad1"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/static/dialogs.js",
+      "git_blob_sha": "a91406abda843f7d5b28460d9fb22a645883ac53",
+      "git_mode": "100644",
+      "size": 4270,
+      "sha256": "02ee59371d65a80fdb746af0820526ff97d5a699831f599df401f8e67eefab34"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/static/evaluation.js",
+      "git_blob_sha": "d4f9950c4ae4ecd8cdeda5d4c3ebabbcc7ee5063",
+      "git_mode": "100644",
+      "size": 13571,
+      "sha256": "7a55e101aa63979c17e2e7e773fbef378aa58fe29653083b9b3da9ffa5130fe5"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/static/focused-review.js",
+      "git_blob_sha": "f3641851f4bffe80eebd8dadcf30bd1af48c447f",
+      "git_mode": "100644",
+      "size": 8907,
+      "sha256": "db3aa45f265d2ae227256090aa2d6408cea3338e77f00be10cc71b95ef589b9a"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/static/index.html",
+      "git_blob_sha": "bf176e2cb536d2efbc7f7847c2a7338aa9abc1f9",
+      "git_mode": "100644",
+      "size": 37889,
+      "sha256": "515f41af752fd3798a2fadae3b19e53c401146c39dd6ac4f16bd6b65088ec5b0"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/static/input_jobs.css",
+      "git_blob_sha": "b78c9184b7adbe416efe00c43cb346248403d254",
+      "git_mode": "100644",
+      "size": 1012,
+      "sha256": "b64db34aa4e3cb380d95a44863e25d02669ad999f9d128a382c3d68363510601"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/static/input_jobs.js",
+      "git_blob_sha": "e0a3710c3b6aa9df9153c4efac489da09a930036",
+      "git_mode": "100644",
+      "size": 19576,
+      "sha256": "16d094d5792685bbfc5c3543e8d2432ac4de0a274040bcdadc9c24d09c786a99"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/static/learning.css",
+      "git_blob_sha": "d8599634969b6d0a4b2f38917aae07deaf52f803",
+      "git_mode": "100644",
+      "size": 1421,
+      "sha256": "a360898e93e525df6d47bce274f71a02b166d687588fb03fb01919f77923e4fa"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/static/offline_evaluation.js",
+      "git_blob_sha": "1c3cf89e84de0fbec47ac2649e240a555863aa47",
+      "git_mode": "100644",
+      "size": 10168,
+      "sha256": "21d08f1cac3d130dc72b536926c192b81f156fcfe51bacff39077604915f0b6d"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/static/preview.js",
+      "git_blob_sha": "2827b3cf7f36c8af2648786d4f758e8adcf17814",
+      "git_mode": "100644",
+      "size": 6528,
+      "sha256": "a3ad62e4d38a6895268fd5656f733e78ca5da1d63114d3256957bf1e74ebc8fc"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/static/sample-review.js",
+      "git_blob_sha": "8cfbb61cf7fdcd2f52266e0c717f25556a1875dc",
+      "git_mode": "100644",
+      "size": 9229,
+      "sha256": "49d15e5d9752f00edd79c3723f494ed88ebe312cd9fa468243554ed9e56f578d"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/static/style.css",
+      "git_blob_sha": "6ebd8c344a95e0576cd1c033fb7a87f7aec265ee",
+      "git_mode": "100644",
+      "size": 30258,
+      "sha256": "8d35364c2754c96fd8a5db9ee2de6627810f04b185c63e2a7c49adc8ebe9745b"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/static/ux-flow.css",
+      "git_blob_sha": "9022b2bc37e9b2ab07a829c4d88e4b0c17322ce4",
+      "git_mode": "100644",
+      "size": 4428,
+      "sha256": "33c72a80dc71ea8dc0a02e52c6f4ebd6299eec97c9101b64cc29e102ed2eb7a9"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/static/ux-flow.js",
+      "git_blob_sha": "c5cd6a1f6a22ec4b28776844dab9e31ca2ccdec7",
+      "git_mode": "100644",
+      "size": 1159,
+      "sha256": "4037440218b26f32150b5e5ade3777914bd3793027f4716ad512a1d47539ecff"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/static/vendor/THIRD_PARTY.md",
+      "git_blob_sha": "d4f80459d484e1ed9ea2838bbe0959f3141ae13c",
+      "git_mode": "100644",
+      "size": 341,
+      "sha256": "8d3acc3fe4ef6eda331790385a96530f9cc043e1f1ef9188f2efe8564ea68859"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/static/vendor/dompurify.LICENSE",
+      "git_blob_sha": "3887d27adba62cecd117fa765eec072cb78dc4a0",
+      "git_mode": "100644",
+      "size": 27729,
+      "sha256": "1b02e03c3fb4f87d476c128f0eb9def1f5a1709d28b180465228bd41574623b7"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/static/vendor/katex.LICENSE",
+      "git_blob_sha": "37c6433e3bedca7a97e08fe35d98582a5f7bac0c",
+      "git_mode": "100644",
+      "size": 1107,
+      "sha256": "766ccc1f306c885aa45542a9846bbd0a505b27a0374f146778171c2254ce18e3"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/static/vendor/katex/katex.min.css",
+      "git_blob_sha": "3d176abf674eb16f0298a8f73884c886218f32ff",
+      "git_mode": "100644",
+      "size": 23352,
+      "sha256": "19095127357ed6d29fe0a63a6b000c913a89f7f1963b765dd3715e97c9852e75"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/static/vendor/katex/katex.min.js",
+      "git_blob_sha": "f59062a93d6fdb5c2e1059c5161746102f105e51",
+      "git_mode": "100644",
+      "size": 276701,
+      "sha256": "e8d885505949f3a5f4abdd5dd0d53696bd1371ad26ffbf4f310dcd77c8cdae89"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/static/vendor/lucide.LICENSE",
+      "git_blob_sha": "325e8ff0aae2dde3134c1ceed780a11d7bd8f544",
+      "git_mode": "100644",
+      "size": 880,
+      "sha256": "1e7290b35280a048667bbf0ebabac1c7fd52a75300e8b2946ac165715997f2bc"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/static/vendor/lucide.js",
+      "git_blob_sha": "20fc68f28744ece56159ef778d23abf0102a5c7c",
+      "git_mode": "100644",
+      "size": 601990,
+      "sha256": "857bd2f08ac818c3c03099a46891e7ef0664e6c1c25503818539099776c45644"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/static/vendor/marked.LICENSE",
+      "git_blob_sha": "4bd2d4a084987ab634893a29f72ff6d1a67bf658",
+      "git_mode": "100644",
+      "size": 2942,
+      "sha256": "8e3a3f82f59a60958f56ca08f445647c32a4733dc7ca6c2c46f6eb898471ab9c"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/static/vendor/marked.umd.js",
+      "git_blob_sha": "5ca252d9f8ad3d8cc8612e559c5ee0b78d29e4d5",
+      "git_mode": "100644",
+      "size": 73384,
+      "sha256": "d7931d1cd7bf727dd756c871637edcc9e0f8538003b927368400ec1ee47a9dd9"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/static/vendor/purify.min.js",
+      "git_blob_sha": "73df78d60aaed11e46fe6006d748fb8e6d754f69",
+      "git_mode": "100644",
+      "size": 22305,
+      "sha256": "89e1fa7647cb495370d3a997ace4387f5d15d9f4c5af12352c53daa400956287"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/static/workflow.js",
+      "git_blob_sha": "7736109ad50bb66ef9d204067084b53244bd13be",
+      "git_mode": "100644",
+      "size": 15147,
+      "sha256": "a048213e4daed0ec7b2ef4ac5c3505d23071fd8d131a77fd7f87f8f0d96cafba"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/tests/fixtures/math_preview_cases.json",
+      "git_blob_sha": "b9b3eceaf1185bc5cfd859146d9f80bb1ea21d2b",
+      "git_mode": "100644",
+      "size": 1364,
+      "sha256": "c511410ae8349ee1c737c5fa68be980ec9aa69ca5c9ec626347b7b07e4fc8f14"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/tests/ui_batch_jobs.cjs",
+      "git_blob_sha": "c2a1bf85098e76ba00d48e28711af8fd84d63217",
+      "git_mode": "100644",
+      "size": 6150,
+      "sha256": "7b695854fca28d8237a9b284afd1d192c4ae4e42567845afc3fa82db21c9cba2"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/tests/ui_bulk_approval.cjs",
+      "git_blob_sha": "3a2c8cf9658bc1fe31adb5445c3e65c0a8e18451",
+      "git_mode": "100644",
+      "size": 6829,
+      "sha256": "d35c40f374dbf64adc245ef91d8ea1e769759385b89b211648290e2eccd8f493"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/tests/ui_combined_edit.cjs",
+      "git_blob_sha": "3be7e2d46ff3e2f91b016d08549a28c0d2f13acb",
+      "git_mode": "100644",
+      "size": 5003,
+      "sha256": "fd0a7d7aa19fc9599068faf112fa58473e2408248f82c203a89bfae2d66a2359"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/tests/ui_evaluation.cjs",
+      "git_blob_sha": "c497cc9b0a9eddd34596d36612c56ce0918dc143",
+      "git_mode": "100644",
+      "size": 9841,
+      "sha256": "d8a798d17b96ebe315498242a14754e0b42f44200c72d4ed122acc7bc50db58a"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/tests/ui_focused_review.cjs",
+      "git_blob_sha": "fc07a5ed2f238c740021ce4ed4e46f6e1728bbb1",
+      "git_mode": "100644",
+      "size": 8709,
+      "sha256": "2e4cf852b05898de66d32deb04e0165366fd8e0104e7ffd74bda855be32025fe"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/tests/ui_helpers.cjs",
+      "git_blob_sha": "0bb6938bcbe3bcbd3d23f33614b8f95f744b0683",
+      "git_mode": "100644",
+      "size": 348,
+      "sha256": "dd3f79900c294ec12ccf0c4d17a35dd9150b0a02303713d42938d0f7e9734383"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/tests/ui_input_jobs.cjs",
+      "git_blob_sha": "3186760067b59bf4693959fd181b9c825f4c8310",
+      "git_mode": "100644",
+      "size": 6236,
+      "sha256": "4e3aaee2794d890093e605751790ebb9aa6a5a954fafdef603536fad3b4bfc50"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/tests/ui_offline_evaluation.cjs",
+      "git_blob_sha": "e71449781ade46989ec8984c72ce4032e35397a4",
+      "git_mode": "100644",
+      "size": 6889,
+      "sha256": "6fcd8a02f67c1a7d9d821c40ba4d92081c170b31b7e3e039383cb125efb30801"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/tests/ui_sample_review.cjs",
+      "git_blob_sha": "3d30a7c4878b4185a3596ff0893284824ea00182",
+      "git_mode": "100644",
+      "size": 7169,
+      "sha256": "7092d181b3d3d119befca455f06f2151bfe05e0802efe4ee4f969f6353deba2d"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/tests/ui_ux_flow.cjs",
+      "git_blob_sha": "a92849eb6af455bc94802ab71df53a014dbd3ccb",
+      "git_mode": "100644",
+      "size": 13757,
+      "sha256": "1b5761d618269fc3f92a77cb12412562362c270964a9b6668c4f6c4521206f8a"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/tests/ui_workflow.cjs",
+      "git_blob_sha": "7cb5e298920bdd4ea346e809e1d87da6a215b933",
+      "git_mode": "100644",
+      "size": 32290,
+      "sha256": "992c76352d664b6f1101b42d7ef8b4b10586fd6003549763e963a38c72da4c78"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/verify-docs.sh",
+      "git_blob_sha": "22352d9680cec73bb0e1b1e5f3861e4278431a82",
+      "git_mode": "100755",
+      "size": 361,
+      "sha256": "6b32c6dd3ec64a2ec3347e6d027112bc961174687c881880ce8651bbd91d31ee"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_processor/verify.sh",
+      "git_blob_sha": "f5ae528447ffd7351865c3491745a6f5ee494f6b",
+      "git_mode": "100755",
+      "size": 1502,
+      "sha256": "53fbc08c6e4ef648cd98a45ecb94b1b93b7a26d5279a44acd483e2079a2b3d96"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_core/__init__.py",
+      "git_blob_sha": "a55161b375ee6655b453d54fef28172679acc89e",
+      "git_mode": "100644",
+      "size": 54,
+      "sha256": "b7ae8dee6651ccd2c47829f5bab3c9dba8b72111780c1d0afac65c2dfd366be1"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_core/domain/__init__.py",
+      "git_blob_sha": "a55161b375ee6655b453d54fef28172679acc89e",
+      "git_mode": "100644",
+      "size": 54,
+      "sha256": "b7ae8dee6651ccd2c47829f5bab3c9dba8b72111780c1d0afac65c2dfd366be1"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_core/domain/artifact_models.py",
+      "git_blob_sha": "ad62b9b4d5c667641e7b3d2102a29ee89ee483bd",
+      "git_mode": "100644",
+      "size": 4132,
+      "sha256": "66e0815f4ca0b4a380a8930c4b1c28fb15afcdb536234efcd1b77133f728c6e9"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_core/domain/canonical/__init__.py",
+      "git_blob_sha": "21d881f522bc87e484e3fb54e08aec51f75cd7f0",
+      "git_mode": "100644",
+      "size": 964,
+      "sha256": "83c511296ebb60361a462eb789d174922dfb555b341a46f943496acc7443fad1"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_core/domain/canonical/relations.py",
+      "git_blob_sha": "78de2e942657ea200db9180fc7fb99b0bc8276ea",
+      "git_mode": "100644",
+      "size": 1855,
+      "sha256": "7205a225b5b2216af896e129a81b44ef9a03013f267892ca684fcb0bddbeea36"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_core/domain/canonical/schema.py",
+      "git_blob_sha": "5b385bdd14fcbdd0e4cdaf502410e483a39e8e53",
+      "git_mode": "100644",
+      "size": 8729,
+      "sha256": "7a752ab2eccccf017c92f53fe6f044ac02caa813270ad4bd257eddb67bb3490b"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_core/domain/canonical/validate.py",
+      "git_blob_sha": "a075f91fa8307684942c12d953becb135cc786ba",
+      "git_mode": "100644",
+      "size": 6909,
+      "sha256": "c2250e1fc3b5c2ec768a75ebf52a4f288fb179ef1f8755a90cdeaea98ea6c0d5"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_core/domain/relation_models.py",
+      "git_blob_sha": "91eb4070b99ab159292940982ecb1b68eb2db9be",
+      "git_mode": "100644",
+      "size": 5490,
+      "sha256": "fbc2aef28c5bc73b8492f223e5d53a99464a41efe601c9450b3ee8cc65821e67"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_core/domain/services/__init__.py",
+      "git_blob_sha": "a55161b375ee6655b453d54fef28172679acc89e",
+      "git_mode": "100644",
+      "size": 54,
+      "sha256": "b7ae8dee6651ccd2c47829f5bab3c9dba8b72111780c1d0afac65c2dfd366be1"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_core/domain/services/relation_service.py",
+      "git_blob_sha": "468f665b52739788efe6f3a910e94d70d0b3e29f",
+      "git_mode": "100644",
+      "size": 10287,
+      "sha256": "f5967e5192cae00cbf297d1e12ae08dbdd7b0d3ac08f467f9a1b6c6b57417396"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_core/indexing/__init__.py",
+      "git_blob_sha": "51a5f008acc01fdbfc723f0063b64b7245f0d8f2",
+      "git_mode": "100644",
+      "size": 199,
+      "sha256": "e9351c06275ecd949f15e6b8c31618a2b287ee47e203a236b5f98c1b64f2f788"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_core/indexing/origin_index.py",
+      "git_blob_sha": "dfc560ae1ffda4b7be154882329c3a8ab5b5a275",
+      "git_mode": "100644",
+      "size": 7990,
+      "sha256": "1ab79638e1604c18fdff33d6e2afb7b748620a81985af376de478788d625a779"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_core/storage/__init__.py",
+      "git_blob_sha": "a55161b375ee6655b453d54fef28172679acc89e",
+      "git_mode": "100644",
+      "size": 54,
+      "sha256": "b7ae8dee6651ccd2c47829f5bab3c9dba8b72111780c1d0afac65c2dfd366be1"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_core/storage/aggregate_views.py",
+      "git_blob_sha": "4b80d96996ed56c931143b922bd126c410c88636",
+      "git_mode": "100644",
+      "size": 2670,
+      "sha256": "1387fa0f4730ae73401b0f0fcb7bcaf0128fb7299cbbe967b9df8547018d4ff9"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_core/storage/artifact_repository.py",
+      "git_blob_sha": "b3283b3ce864161fbe192d690a646b0f1e3cdbf2",
+      "git_mode": "100644",
+      "size": 11396,
+      "sha256": "f0185892a95c41c273b79d762afbd3776a0cabb6a5d848ceeaf9366cd19bcf4f"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_core/storage/kice_master_repository.py",
+      "git_blob_sha": "6cf2d8534cc9a0df33867d40df39f8b8ef284833",
+      "git_mode": "100644",
+      "size": 4500,
+      "sha256": "17e8350325b3cf63205eadf79f035255139cfab12f78b6b8228b6a0afe99b185"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_core/storage/relation_repository.py",
+      "git_blob_sha": "7baf7350cbe19ba0da2d7fbce2e7923c929bea1f",
+      "git_mode": "100644",
+      "size": 3841,
+      "sha256": "3488eb726447b276520f1f8013aa6aba0fbba246dc8e408f1a4756eb44c8a774"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_core/tests/__init__.py",
+      "git_blob_sha": "a55161b375ee6655b453d54fef28172679acc89e",
+      "git_mode": "100644",
+      "size": 54,
+      "sha256": "b7ae8dee6651ccd2c47829f5bab3c9dba8b72111780c1d0afac65c2dfd366be1"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_core/tests/fixtures/canonical-v0.3.json",
+      "git_blob_sha": "2d1b704e9f620e349730e92a3ef85b2a6fe8a434",
+      "git_mode": "100644",
+      "size": 1980,
+      "sha256": "59e38a3862659badba5b9eaec7c65e4f7127744ebbc8b7a08702c58f1ae5c245"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_core/tests/test_core_contract.py",
+      "git_blob_sha": "8ede1f4152de8752854082a8a50ed6c1eae0d905",
+      "git_mode": "100644",
+      "size": 5383,
+      "sha256": "a529fac5f4bf20139203ccc3aea3fe8b6bbfdc7bc195db3ebeda0be5ccec6331"
+    },
+    {
+      "path": "_scripts_2/apps/exam/exam_core/verify.sh",
+      "git_blob_sha": "4590b4ffdbe8d585c41856d25f58c80123fb496b",
+      "git_mode": "100755",
+      "size": 340,
+      "sha256": "a32c97570e0d26e9933549ba3eaa25e50b6380a9fc1f4b7d00f39b32bff6bf41"
+    },
+    {
+      "path": "_scripts_2/ai_core/__init__.py",
+      "git_blob_sha": "966b0b2be6868249c9f1dea49016a9b963a3e5e0",
+      "git_mode": "100644",
+      "size": 1424,
+      "sha256": "9d95356651cc8e9431dd541d21e514bd05840ac9fb2816f86bba1da212e3125d"
+    },
+    {
+      "path": "_scripts_2/ai_core/client.py",
+      "git_blob_sha": "8bed04e627e1c44c2512b4deeb94b8a44a300f28",
+      "git_mode": "100644",
+      "size": 21099,
+      "sha256": "1fcab5488773f0fefbba7e743fdddb90bbfce68bc5038ef548f48989f86566dd"
+    },
+    {
+      "path": "_scripts_2/ai_core/keychain.py",
+      "git_blob_sha": "4936d523131397bf177be3cd699cf1263c3da6a2",
+      "git_mode": "100644",
+      "size": 7168,
+      "sha256": "599aa823bb993b037491131767e9d296a4868fcf6dffc7963a1966da13ab283e"
+    },
+    {
+      "path": "_scripts_2/ai_core/providers/__init__.py",
+      "git_blob_sha": "24108d55e6de390f826c6f61476579d0b7bee289",
+      "git_mode": "100644",
+      "size": 260,
+      "sha256": "3d73737041fd51a4cef90978c25d8088f59e77656097b64d35eff3eb3bade960"
+    },
+    {
+      "path": "_scripts_2/ai_core/providers/base.py",
+      "git_blob_sha": "f8b64ad18616f7645102219573aa1e88c9230209",
+      "git_mode": "100644",
+      "size": 1477,
+      "sha256": "e498d7e18183bcc4d26375e3963591450ab27b160c63add68242ef7c5d38781e"
+    },
+    {
+      "path": "_scripts_2/ai_core/providers/gemini.py",
+      "git_blob_sha": "8b5e799b07b59edbf9093a8831e0b343a13f04e1",
+      "git_mode": "100644",
+      "size": 24446,
+      "sha256": "ce1833f0183b330720868fcdc47a8690a2da7083611aa6d1696d5387aed91293"
+    },
+    {
+      "path": "_scripts_2/ai_core/providers/groq.py",
+      "git_blob_sha": "21e8ee9262cfb94c7d8ab217787cecfc275fb2a9",
+      "git_mode": "100644",
+      "size": 12165,
+      "sha256": "e9f2f0ed407af614df680ec345b009978eaa1697614fbf83aa7ab9362b9a3223"
+    },
+    {
+      "path": "_scripts_2/ai_core/providers/groq_vision.py",
+      "git_blob_sha": "e1a3b4b5a8063ed355513d6dba4b75cbd71b2f88",
+      "git_mode": "100644",
+      "size": 7804,
+      "sha256": "17c34c0353e470f519bdef1f8428d0ae067041da15a1a9c2b303912497b5043b"
+    },
+    {
+      "path": "_scripts_2/ai_core/stream_usage.py",
+      "git_blob_sha": "bb44621fd1984ee43a4f9a3758e3bdc690122ee9",
+      "git_mode": "100644",
+      "size": 4340,
+      "sha256": "14cdc9990a280b01127a0c13f5c91fa14425ae892b8d4c4fe6020bfec44f57d2"
+    },
+    {
+      "path": "_scripts_2/ai_core/usage_tracker.py",
+      "git_blob_sha": "27c1b18389b354d046f2587f8d7f064e1f71518a",
+      "git_mode": "100644",
+      "size": 15586,
+      "sha256": "77016f4e619bf75d80d7f8875dfb8c2e6d8664186bfa6996c2a4482ebbfa0fe9"
+    },
+    {
+      "path": "_scripts_2/apps/__init__.py",
+      "git_blob_sha": "69b369ada172769b9f10389825c7d38f915b9364",
+      "git_mode": "100644",
+      "size": 61,
+      "sha256": "c49468a508a90cd450231d0f555110ea82134b82422bf30a57ca8338a6d07060"
+    },
+    {
+      "path": "_scripts_2/apps/exam/__init__.py",
+      "git_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "git_mode": "100644",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "_scripts_2/apps/branding.py",
+      "git_blob_sha": "0fd739e46b796c6944f6dcb4978d851973f28112",
+      "git_mode": "100644",
+      "size": 2830,
+      "sha256": "ade922358374efc7caff4d6dadcf902fb9b9d235d21d02e61115a76371194e24"
+    },
+    {
+      "path": "_scripts_2/path_contract.py",
+      "git_blob_sha": "bf17f76a97c11819b97520f60dfdb2e61f301cfd",
+      "git_mode": "100644",
+      "size": 7274,
+      "sha256": "9d7e0a7dd0c33a2db68fccdba737172f76a0ab0387e06de70ac9a066f1d812ed"
+    },
+    {
+      "path": "_scripts_2/vault_paths.py",
+      "git_blob_sha": "9be9af4a088cd9e5258c303be8db2e7d87368fbb",
+      "git_mode": "100644",
+      "size": 8012,
+      "sha256": "f4fb4ac22c26a883fe178fa8bdd3dadbb318d63d83853d849052c8ef49d99a2f"
+    },
+    {
+      "path": "_scripts_2/package.json",
+      "git_blob_sha": "d6501f3427797445499d2eacda7655bd8bfc70b6",
+      "git_mode": "100644",
+      "size": 699,
+      "sha256": "ee90e3bc432bdf3d751418183310a1f9b762fb476214b28f291f3344c4fd0ac8"
+    },
+    {
+      "path": "_scripts_2/package-lock.json",
+      "git_blob_sha": "3c03b6d715f3afc8b79ee9a9e0d691ceaf8d8684",
+      "git_mode": "100644",
+      "size": 1844,
+      "sha256": "b7de97329e4eb0ea0a75ec91418eca84eac3a9e020a2528b5528ddb179f37367"
+    },
+    {
+      "path": "_scripts_2/apps/lecture/lecture_transcriber/package.json",
+      "git_blob_sha": "f859e7b3a70fa30a8de32ca21567d13854690e1e",
+      "git_mode": "100644",
+      "size": 212,
+      "sha256": "5fde2d61b6ce4923774160fdd457846cc5501bf18f820e6bb140c4477a52bea6"
+    },
+    {
+      "path": "_scripts_2/apps/_bootstrap.sh",
+      "git_blob_sha": "58b5c039e8e3d99b557d83026a6fd1e71f489f47",
+      "git_mode": "100755",
+      "size": 1733,
+      "sha256": "9380c6347555e2fd8b2f0d7be0e8356276376a3e842b9bce9ee65b3a1b635546"
+    },
+    {
+      "path": "_scripts_2/apps/_verifier_runtime.sh",
+      "git_blob_sha": "1090bd196977756eb7ad5716cd9a3caff86e844a",
+      "git_mode": "100644",
+      "size": 2519,
+      "sha256": "f20f167ff2c39cfbf889e40d460f875afc57115c1d0d93e291f294d32d2c01d3"
+    },
+    {
+      "path": "_scripts_2/program_catalog.json",
+      "git_blob_sha": "2aa0100dcd5877a471e5a57cf38193d82bd23534",
+      "git_mode": "100644",
+      "size": 6377,
+      "sha256": "d0caed792212e0e2453abd03bf55a5fe1079d35ed18bdaa8479392dec4715ba4"
+    },
+    {
+      "path": "_scripts_2/ai_core/classifier.py",
+      "git_blob_sha": "62c6131fd85c64ca5e82d61e7076f61021b87f62",
+      "git_mode": "100644",
+      "size": 4240,
+      "sha256": "6a7e797c881d06e32a576255817b16624e681d26e48847b8874026caba21921c"
+    },
+    {
+      "path": "_scripts_2/ai_core/prompts.py",
+      "git_blob_sha": "47fa33688880340c99e217fdb59487fb43c22559",
+      "git_mode": "100644",
+      "size": 3875,
+      "sha256": "77158efb3eafe77ae482a4c1793516c65584726d65634a4e4889d0670a444f91"
+    }
+  ],
+  "excluded": [
+    "Vaults, actual jobs and databases, usage/state, credentials, private history",
+    "operational reviews/screenshots",
+    "source-derived material-preview fixture and its optional smoke test",
+    "operational review_2506 repair script"
+  ],
+  "limitations": [
+    "No actual source PDFs or production data",
+    "Not a full private repository checkout",
+    "Optional UI smoke depending on excluded real-source-derived fixture requires private input; standard workflow suite remains included"
+  ]
+}

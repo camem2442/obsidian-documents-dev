@@ -1,0 +1,22 @@
+{
+  "name": "study-tools",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Shared Node devDependencies for Study Tools browser UI tests",
+  "workspaces": [
+    "apps/exam/exam_processor",
+    "apps/lecture/lecture_transcriber"
+  ],
+  "devDependencies": {
+    "playwright": "1.63.0"
+  },
+  "scripts": {
+    "test:ui:exam": "npm run test:ui -w exam-processor-browser-tests",
+    "test:ui:exam:smoke": "npm run test:ui:smoke -w exam-processor-browser-tests",
+    "test:ui:lecture:smoke": "npm run test:ui:smoke -w lecture-transcriber-browser-tests",
+    "test:ui:lecture:workflow": "npm run test:ui:workflow -w lecture-transcriber-browser-tests"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

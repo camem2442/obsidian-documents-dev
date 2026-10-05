@@ -1,0 +1,65 @@
+[
+  {
+    "name": "permutation_blank_line",
+    "source": "${}_7\n\n\\mathrm{P}_3$",
+    "output": "${}_7 \\mathrm{P}_3$",
+    "inline": 1,
+    "display": 0
+  },
+  {
+    "name": "combination",
+    "source": "${}_{n}\n\\mathrm{C}_{r}$",
+    "output": "${}_{n} \\mathrm{C}_{r}$",
+    "inline": 1,
+    "display": 0
+  },
+  {
+    "name": "subscripts",
+    "source": "$a_{i+1}+x^2$",
+    "output": "$a_{i+1}+x^2$",
+    "inline": 1,
+    "display": 0
+  },
+  {
+    "name": "adjacent",
+    "source": "$n$개에서 $r$개",
+    "output": "$n$개에서 $r$개",
+    "inline": 2,
+    "display": 0
+  },
+  {
+    "name": "escaped_inline",
+    "source": "\\(a_i\n+ b_j\\)",
+    "output": "\\(a_i + b_j\\)",
+    "inline": 1,
+    "display": 0
+  },
+  {
+    "name": "display",
+    "source": "$$\\frac{n!}{\n(n-r)!}$$",
+    "output": "$$\\frac{n!}{\n(n-r)!}$$",
+    "inline": 0,
+    "display": 1
+  },
+  {
+    "name": "bracket_display",
+    "source": "\\[a_i\n+ b_j\\]",
+    "output": "\\[a_i\n+ b_j\\]",
+    "inline": 0,
+    "display": 1
+  },
+  {
+    "name": "code",
+    "source": "`$a_b$`\n\n```tex\n${}_n\n\\mathrm{P}_r$\n```",
+    "output": "`$a_b$`\n\n```tex\n${}_n\n\\mathrm{P}_r$\n```",
+    "inline": 0,
+    "display": 0
+  },
+  {
+    "name": "escaped_dollar",
+    "source": "가격 \\$7, 식 $a_i$",
+    "output": "가격 \\$7, 식 $a_i$",
+    "inline": 1,
+    "display": 0
+  }
+]

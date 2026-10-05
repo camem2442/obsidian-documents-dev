@@ -1,0 +1,89 @@
+{
+  "schema_version": "0.3.0",
+  "question": {
+    "question_id": "core-fixture-q1",
+    "display_code": "29",
+    "subject": "math",
+    "content_kind": "question",
+    "question_number": "29",
+    "points": null,
+    "correct_rate": null,
+    "answer": null,
+    "question_type": null,
+    "difficulty": null,
+    "status": "unread",
+    "content_type": "",
+    "variant_of": [],
+    "modality": "",
+    "question_set_id": "",
+    "strategy_tags": []
+  },
+  "source": {
+    "source_id": "fixture-source",
+    "type": "exam",
+    "title": "격리 검증 자료",
+    "format_id": "",
+    "edition": null,
+    "section_code": null,
+    "section_title": null,
+    "item_code": null,
+    "print_labels": [],
+    "source_set_id": "",
+    "exam_code": "",
+    "exam_form": "",
+    "locator": {
+      "document_id": "",
+      "pdf_pages": []
+    }
+  },
+  "origin": {
+    "type": "kice",
+    "academic_year": "2026",
+    "administration_year": "",
+    "session": "09",
+    "round": null,
+    "authority": "kice",
+    "track": "prob_stat",
+    "question_number": "29",
+    "raw_label": "",
+    "variants": [],
+    "question_id": "",
+    "subject": "",
+    "exam_form": ""
+  },
+  "unit": {
+    "display_name": null,
+    "path": [],
+    "code": null,
+    "taxonomy_id": null
+  },
+  "relations": {
+    "passage_ids": [],
+    "solution_ids": [],
+    "listening_script_ids": []
+  },
+  "provenance": {
+    "revision_id": "fixture-rev1",
+    "source_record_ids": [],
+    "source_regions": [],
+    "source_hashes": [
+      "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    ]
+  },
+  "classification": {
+    "status": "unclassified",
+    "method": null,
+    "candidates": [],
+    "evidence": [],
+    "curriculum_revision": null
+  },
+  "review": {
+    "transcription": "completed",
+    "source_audit": "no_difference",
+    "classification": "not_started",
+    "human_approval": "approved"
+  },
+  "assets": [],
+  "body": "확률을 구하시오. $P(A)=1/2$",
+  "solution": ""
+}
