@@ -1,0 +1,239 @@
+{
+  "schema_version": 1,
+  "categories": [
+    {
+      "id": "lecture",
+      "name": "강의",
+      "order": 10,
+      "icon": "graduationcap.fill"
+    },
+    {
+      "id": "exam",
+      "name": "시험·기출",
+      "order": 20,
+      "icon": "doc.text.viewfinder"
+    },
+    {
+      "id": "books",
+      "name": "교재·도서",
+      "order": 30,
+      "icon": "books.vertical.fill"
+    },
+    {
+      "id": "documents",
+      "name": "문서 도구",
+      "order": 40,
+      "icon": "doc.text.fill"
+    },
+    {
+      "id": "other",
+      "name": "기타",
+      "order": 50,
+      "icon": "square.grid.3x3"
+    }
+  ],
+  "programs": [
+    {
+      "id": "lecture-transcriber",
+      "name": "Lecture Transcriber",
+      "icon": "waveform",
+      "category": "lecture",
+      "kind": "user_app",
+      "entrypoint": "dist/Lecture Transcriber.app",
+      "launch_type": "application",
+      "default_frequency": "frequent",
+      "shortcut": "1",
+      "enabled": true
+    },
+    {
+      "id": "lecture-sorter",
+      "name": "Lecture Sorter",
+      "icon": "tray.and.arrow.down.fill",
+      "category": "lecture",
+      "kind": "user_app",
+      "entrypoint": "apps/lecture/lecture_sorter/run.sh",
+      "launch_type": "shell",
+      "default_frequency": "frequent",
+      "shortcut": "2",
+      "enabled": true
+    },
+    {
+      "id": "lecture-pdf-extractor",
+      "name": "Lecture PDF Extractor",
+      "icon": "doc.viewfinder.fill",
+      "category": "lecture",
+      "kind": "user_app",
+      "entrypoint": "apps/lecture/lecture_pdf_extractor/run.sh",
+      "launch_type": "shell",
+      "default_frequency": "frequent",
+      "shortcut": "3",
+      "enabled": true
+    },
+    {
+      "id": "live-caption",
+      "name": "Live Caption",
+      "icon": "captions.bubble.fill",
+      "category": "lecture",
+      "kind": "user_app",
+      "entrypoint": "dist/Live Caption.app",
+      "launch_type": "application",
+      "default_frequency": "frequent",
+      "shortcut": "t",
+      "enabled": true
+    },
+    {
+      "id": "ebsi-collector",
+      "name": "EBSi Collector",
+      "icon": "tray.and.arrow.down",
+      "category": "exam",
+      "kind": "user_app",
+      "entrypoint": "apps/exam/ebsi_collector/run.sh",
+      "launch_type": "shell",
+      "default_frequency": "frequent",
+      "shortcut": "e",
+      "enabled": true
+    },
+    {
+      "id": "exam-processor",
+      "name": "Exam Processor",
+      "icon": "doc.text.viewfinder",
+      "category": "exam",
+      "kind": "user_app",
+      "entrypoint": "apps/exam/exam_processor/launch.sh",
+      "launch_type": "shell",
+      "default_frequency": "frequent",
+      "shortcut": "9",
+      "enabled": true
+    },
+    {
+      "id": "image-to-pdf",
+      "name": "image_to_pdf",
+      "icon": "photo.on.rectangle.angled",
+      "category": "books",
+      "kind": "user_app",
+      "entrypoint": "apps/books/image_to_pdf/run.sh",
+      "launch_type": "shell",
+      "default_frequency": "frequent",
+      "shortcut": "7",
+      "enabled": true
+    },
+    {
+      "id": "metaphysics-processor",
+      "name": "metaphysics_processor",
+      "icon": "building.columns.fill",
+      "category": "books",
+      "kind": "user_app",
+      "entrypoint": "apps/books/metaphysics_processor/run.sh",
+      "launch_type": "shell",
+      "default_frequency": "other",
+      "shortcut": "8",
+      "enabled": true
+    },
+    {
+      "id": "textbook-processor",
+      "name": "Textbook Processor",
+      "icon": "books.vertical.fill",
+      "category": "books",
+      "kind": "batch_tool",
+      "entrypoint": "apps/books/textbook_processor/run.sh",
+      "launch_type": "shell",
+      "default_frequency": "hidden",
+      "enabled": false
+    },
+    {
+      "id": "smart-merger",
+      "name": "Smart Merger",
+      "icon": "doc.on.doc.fill",
+      "category": "documents",
+      "kind": "user_app",
+      "entrypoint": "dist/Smart Merger.app",
+      "launch_type": "application",
+      "default_frequency": "other",
+      "shortcut": "m",
+      "enabled": true
+    },
+    {
+      "id": "merge-markdown",
+      "name": "Merge Markdown",
+      "icon": "doc.on.doc.fill",
+      "category": "documents",
+      "kind": "user_app",
+      "entrypoint": "apps/documents/merge_markdown/run.sh",
+      "launch_type": "shell",
+      "default_frequency": "other",
+      "shortcut": "4",
+      "enabled": true
+    },
+    {
+      "id": "json-tool",
+      "name": "JSON Tool",
+      "icon": "curlybraces.square.fill",
+      "category": "documents",
+      "kind": "user_app",
+      "entrypoint": "apps/documents/json_tool/run.sh",
+      "launch_type": "shell",
+      "default_frequency": "other",
+      "shortcut": "5",
+      "enabled": true
+    },
+    {
+      "id": "code-merger",
+      "name": "Code Merger",
+      "icon": "chevron.left.forwardslash.chevron.right",
+      "category": "documents",
+      "kind": "user_app",
+      "entrypoint": "apps/documents/code_merger/run.sh",
+      "launch_type": "shell",
+      "default_frequency": "other",
+      "shortcut": "c",
+      "enabled": true
+    },
+    {
+      "id": "svg-converter",
+      "name": "SVG Converter",
+      "icon": "chart.xyaxis.line",
+      "category": "documents",
+      "kind": "user_app",
+      "entrypoint": "apps/documents/svg_converter/run.sh",
+      "launch_type": "shell",
+      "default_frequency": "frequent",
+      "shortcut": "s",
+      "enabled": true
+    },
+    {
+      "id": "youtube-transcript-studio",
+      "name": "YouTube Transcript Studio",
+      "icon": "play.rectangle.fill",
+      "category": "other",
+      "kind": "user_app",
+      "entrypoint": "apps/media/youtube_transcript_studio/run.sh",
+      "launch_type": "shell",
+      "default_frequency": "frequent",
+      "shortcut": "6",
+      "enabled": true
+    },
+    {
+      "id": "ai-core-status",
+      "name": "AI Core Status",
+      "icon": "cpu.fill",
+      "category": "other",
+      "kind": "support_tool",
+      "entrypoint": "ai_core/cli.py",
+      "launch_type": "python_cli",
+      "default_frequency": "hidden",
+      "enabled": false
+    },
+    {
+      "id": "study-assistant",
+      "name": "Study Assistant",
+      "icon": "brain.head.profile",
+      "category": "lecture",
+      "kind": "user_app",
+      "entrypoint": "apps/study_assistant/launch.sh",
+      "launch_type": "shell",
+      "default_frequency": "frequent",
+      "shortcut": "a",
+      "enabled": true
+    }
+  ]
+}

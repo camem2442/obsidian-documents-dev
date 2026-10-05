@@ -18,3 +18,7 @@ Only the files in the export manifest are part of this pilot. Runtime state,
 private source history, workflows and application acceptance are excluded.
 No open-source license is added by this export; license selection remains a
 separate owner decision.
+
+## Additional reviewed input: SVG Converter
+
+See [SVG offline input](SVG_INPUT_README.md) and its [manifest](SVG_INPUT_MANIFEST.json) for the separately scoped logging/paste development input. The original file-hash pilot and its tests remain included.

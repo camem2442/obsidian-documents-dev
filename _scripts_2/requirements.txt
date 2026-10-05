@@ -1,0 +1,42 @@
+# Aggregated Python dependencies for the _scripts_2 Study Tools suite.
+# Installed into the shared venv (_scripts_2/venv) used by every app run.sh
+# via apps/_bootstrap.sh. Grouped by originating app for traceability.
+
+# --- Document tools (merge_markdown, code_merger, json_tool) ---
+questionary
+rich>=13.7.0
+prompt_toolkit
+PyQt6>=6.6
+unidiff>=0.7.5
+
+# --- Exam processor (apps/exam/exam_processor) ---
+fastapi>=0.115
+uvicorn>=0.30
+pydantic>=2.8
+pdfplumber>=0.11
+pypdfium2>=4.30
+Pillow>=10
+
+# --- Books pipelines (image_to_pdf, metaphysics/textbook processors) ---
+numpy>=1.26
+
+# --- Media tools (youtube_transcript_studio) ---
+yt-dlp>=2024.12.23
+youtube-transcript-api>=0.6.2
+pywebview>=5.0.0
+
+# --- Lecture tools / AI Core ---
+google-genai>=2.22,<3
+jsonschema>=4.23
+
+# --- Shared / crawlers ---
+requests>=2.31
+certifi>=2024.2.2
+truststore>=0.10.0; sys_platform == "darwin"
+beautifulsoup4>=4.12
+
+# --- Study Assistant (apps/study_assistant) ---
+PyYAML>=6.0
+watchdog>=4.0
+sqlite-vec>=0.1.6
+fastembed>=0.6.0

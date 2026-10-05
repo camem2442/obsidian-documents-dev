@@ -1,0 +1,209 @@
+{
+  "source_files": [
+    {
+      "path": "_scripts_2/ai_core/__init__.py",
+      "size": 1424,
+      "sha256": "9d95356651cc8e9431dd541d21e514bd05840ac9fb2816f86bba1da212e3125d",
+      "mode": "0o644",
+      "git_blob_sha": "966b0b2be6868249c9f1dea49016a9b963a3e5e0",
+      "git_mode": "100644"
+    },
+    {
+      "path": "_scripts_2/ai_core/classifier.py",
+      "size": 4240,
+      "sha256": "6a7e797c881d06e32a576255817b16624e681d26e48847b8874026caba21921c",
+      "mode": "0o644",
+      "git_blob_sha": "62c6131fd85c64ca5e82d61e7076f61021b87f62",
+      "git_mode": "100644"
+    },
+    {
+      "path": "_scripts_2/ai_core/client.py",
+      "size": 21099,
+      "sha256": "1fcab5488773f0fefbba7e743fdddb90bbfce68bc5038ef548f48989f86566dd",
+      "mode": "0o644",
+      "git_blob_sha": "8bed04e627e1c44c2512b4deeb94b8a44a300f28",
+      "git_mode": "100644"
+    },
+    {
+      "path": "_scripts_2/ai_core/keychain.py",
+      "size": 7168,
+      "sha256": "599aa823bb993b037491131767e9d296a4868fcf6dffc7963a1966da13ab283e",
+      "mode": "0o644",
+      "git_blob_sha": "4936d523131397bf177be3cd699cf1263c3da6a2",
+      "git_mode": "100644"
+    },
+    {
+      "path": "_scripts_2/ai_core/prompts.py",
+      "size": 3875,
+      "sha256": "77158efb3eafe77ae482a4c1793516c65584726d65634a4e4889d0670a444f91",
+      "mode": "0o644",
+      "git_blob_sha": "47fa33688880340c99e217fdb59487fb43c22559",
+      "git_mode": "100644"
+    },
+    {
+      "path": "_scripts_2/ai_core/providers/__init__.py",
+      "size": 260,
+      "sha256": "3d73737041fd51a4cef90978c25d8088f59e77656097b64d35eff3eb3bade960",
+      "mode": "0o644",
+      "git_blob_sha": "24108d55e6de390f826c6f61476579d0b7bee289",
+      "git_mode": "100644"
+    },
+    {
+      "path": "_scripts_2/ai_core/providers/base.py",
+      "size": 1477,
+      "sha256": "e498d7e18183bcc4d26375e3963591450ab27b160c63add68242ef7c5d38781e",
+      "mode": "0o644",
+      "git_blob_sha": "f8b64ad18616f7645102219573aa1e88c9230209",
+      "git_mode": "100644"
+    },
+    {
+      "path": "_scripts_2/ai_core/providers/gemini.py",
+      "size": 24446,
+      "sha256": "ce1833f0183b330720868fcdc47a8690a2da7083611aa6d1696d5387aed91293",
+      "mode": "0o644",
+      "git_blob_sha": "8b5e799b07b59edbf9093a8831e0b343a13f04e1",
+      "git_mode": "100644"
+    },
+    {
+      "path": "_scripts_2/ai_core/providers/groq.py",
+      "size": 12165,
+      "sha256": "e9f2f0ed407af614df680ec345b009978eaa1697614fbf83aa7ab9362b9a3223",
+      "mode": "0o644",
+      "git_blob_sha": "21e8ee9262cfb94c7d8ab217787cecfc275fb2a9",
+      "git_mode": "100644"
+    },
+    {
+      "path": "_scripts_2/ai_core/providers/groq_vision.py",
+      "size": 7804,
+      "sha256": "17c34c0353e470f519bdef1f8428d0ae067041da15a1a9c2b303912497b5043b",
+      "mode": "0o644",
+      "git_blob_sha": "e1a3b4b5a8063ed355513d6dba4b75cbd71b2f88",
+      "git_mode": "100644"
+    },
+    {
+      "path": "_scripts_2/ai_core/stream_usage.py",
+      "size": 4340,
+      "sha256": "14cdc9990a280b01127a0c13f5c91fa14425ae892b8d4c4fe6020bfec44f57d2",
+      "mode": "0o644",
+      "git_blob_sha": "bb44621fd1984ee43a4f9a3758e3bdc690122ee9",
+      "git_mode": "100644"
+    },
+    {
+      "path": "_scripts_2/ai_core/usage_tracker.py",
+      "size": 15586,
+      "sha256": "77016f4e619bf75d80d7f8875dfb8c2e6d8664186bfa6996c2a4482ebbfa0fe9",
+      "mode": "0o644",
+      "git_blob_sha": "27c1b18389b354d046f2587f8d7f064e1f71518a",
+      "git_mode": "100644"
+    },
+    {
+      "path": "_scripts_2/apps/__init__.py",
+      "size": 61,
+      "sha256": "c49468a508a90cd450231d0f555110ea82134b82422bf30a57ca8338a6d07060",
+      "mode": "0o644",
+      "git_blob_sha": "69b369ada172769b9f10389825c7d38f915b9364",
+      "git_mode": "100644"
+    },
+    {
+      "path": "_scripts_2/apps/_bootstrap.sh",
+      "size": 1733,
+      "sha256": "9380c6347555e2fd8b2f0d7be0e8356276376a3e842b9bce9ee65b3a1b635546",
+      "mode": "0o755",
+      "git_blob_sha": "58b5c039e8e3d99b557d83026a6fd1e71f489f47",
+      "git_mode": "100755"
+    },
+    {
+      "path": "_scripts_2/apps/_verifier_runtime.sh",
+      "size": 2519,
+      "sha256": "f20f167ff2c39cfbf889e40d460f875afc57115c1d0d93e291f294d32d2c01d3",
+      "mode": "0o644",
+      "git_blob_sha": "1090bd196977756eb7ad5716cd9a3caff86e844a",
+      "git_mode": "100644"
+    },
+    {
+      "path": "_scripts_2/apps/documents/__init__.py",
+      "size": 38,
+      "sha256": "f369119f25a90b6b581d2e3bf92df53f533fb77fb7a1c84a9d0b01ef220fddb1",
+      "mode": "0o644",
+      "git_blob_sha": "05abe38ce60422eaed77b89d128e681805a9d170",
+      "git_mode": "100644"
+    },
+    {
+      "path": "_scripts_2/apps/documents/svg_converter/__init__.py",
+      "size": 852,
+      "sha256": "a7a5563b09be89a46bb32f2d57c5534f7ee1b7706a179cdd677622b6ed7aac57",
+      "mode": "0o644",
+      "git_blob_sha": "86f8ba99065e13da91ccd9dd51f5cf2c07c92f51",
+      "git_mode": "100644"
+    },
+    {
+      "path": "_scripts_2/apps/documents/svg_converter/engine.py",
+      "size": 24307,
+      "sha256": "42ed0139d539ef79c5b579256707ed74b0f1546fd0bbd63f77fbd760614d297d",
+      "mode": "0o644",
+      "git_blob_sha": "304bda8dfcd32f8d3d773849a649f31c05147da9",
+      "git_mode": "100644"
+    },
+    {
+      "path": "_scripts_2/apps/documents/svg_converter/gui.py",
+      "size": 40881,
+      "sha256": "26bc9d2dff8797c95782979e30fd5689d8b2f6354db163eec42a79e8a23c823a",
+      "mode": "0o644",
+      "git_blob_sha": "9fad8d9319e658a97fa095c181c7936fee0e1739",
+      "git_mode": "100644"
+    },
+    {
+      "path": "_scripts_2/apps/documents/svg_converter/tests/test_gui_logging.py",
+      "size": 7423,
+      "sha256": "4b6d2499f9221e4c771db3d83496739a00d6413a8d5d8cd39cc2c24ac37ce20a",
+      "mode": "0o644",
+      "git_blob_sha": "489b5aa1e988a9de6b56e9317ccf3ee28036c242",
+      "git_mode": "100644"
+    },
+    {
+      "path": "_scripts_2/apps/documents/svg_converter/tests/test_gui_paste.py",
+      "size": 6093,
+      "sha256": "c137f13e85e3299c8639939cd78f77fc17722b9b980ec4f18c9d5715c8c48c55",
+      "mode": "0o644",
+      "git_blob_sha": "0c3db62b14e49cc8de750f4b56e6caf1c527114f",
+      "git_mode": "100644"
+    },
+    {
+      "path": "_scripts_2/apps/documents/svg_converter/verify.sh",
+      "size": 611,
+      "sha256": "3866227657d71df473602a937519445115583a2811e9ecfdec51a1ee468919d4",
+      "mode": "0o755",
+      "git_blob_sha": "bd51ae378b679d0aed11765bb978aca183d07d53",
+      "git_mode": "100755"
+    },
+    {
+      "path": "_scripts_2/program_catalog.json",
+      "size": 6377,
+      "sha256": "d0caed792212e0e2453abd03bf55a5fe1079d35ed18bdaa8479392dec4715ba4",
+      "mode": "0o644",
+      "git_blob_sha": "2aa0100dcd5877a471e5a57cf38193d82bd23534",
+      "git_mode": "100644"
+    },
+    {
+      "path": "_scripts_2/requirements.txt",
+      "size": 1008,
+      "sha256": "445b0c30341f2bac5e915b571c7302680255f956cbf63fea38e8bd67b67b2469",
+      "mode": "0o644",
+      "git_blob_sha": "3231c55cfc2f646cfce027fe7ae37932b91164ad",
+      "git_mode": "100644"
+    }
+  ],
+  "total_source_bytes": 195787,
+  "schema": "svg-offline-input-v1",
+  "scope": "SvgConverterWindow offline logging/paste tests and mocked engine callback",
+  "exclusions": [
+    "actual provider calls",
+    "credential access",
+    "usage ledger",
+    "run_gui branding and native GUI",
+    "CLI",
+    "real image fidelity",
+    "other repository components"
+  ],
+  "exact_private_git": false
+}
