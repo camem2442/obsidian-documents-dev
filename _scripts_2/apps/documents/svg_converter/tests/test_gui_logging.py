@@ -126,10 +126,35 @@ class SvgConverterLoggingTests(unittest.TestCase):
                 self.win._append_log("failure still visible")
                 self.assertIn("failure still visible", self.win.edit_log.toPlainText())
 
-    def test_open_folder_mkdir_failure_still_propagates(self):
-        with patch.object(Path, "mkdir", side_effect=PermissionError("fixture failure")):
-            with self.assertRaises(PermissionError):
-                self.win._open_log_folder()
+    def test_open_folder_mkdir_failure_is_reported_without_launch(self):
+        with patch.object(Path, "mkdir", side_effect=PermissionError("fixture failure")), \
+                patch("_scripts_2.apps.documents.svg_converter.gui.QDesktopServices.openUrl") as opened:
+            self.win._open_log_folder()
+        opened.assert_not_called()
+        self.assertIn("만들 수 없습니다", self.win.lbl_status.text())
+        self.assertEqual(self.win.edit_log.toPlainText(), "")
+
+    def test_open_folder_rejected_is_reported(self):
+        with patch("_scripts_2.apps.documents.svg_converter.gui.QDesktopServices.openUrl", return_value=False) as opened:
+            self.win._open_log_folder()
+        opened.assert_called_once()
+        self.assertTrue(self.log_dir.is_dir())
+        self.assertIn("열 수 없습니다", self.win.lbl_status.text())
+
+    def test_open_folder_can_retry_after_rejection(self):
+        with patch("_scripts_2.apps.documents.svg_converter.gui.QDesktopServices.openUrl", side_effect=[False, True]):
+            self.win._open_log_folder()
+            self.assertIn("열 수 없습니다", self.win.lbl_status.text())
+            self.win._open_log_folder()
+        self.assertEqual(self.win.lbl_status.text(), f"📂 로그 폴더 열기: {self.log_dir}")
+
+    def test_open_folder_existing_file_is_preserved(self):
+        self.log_dir.write_bytes(b"existing file must survive")
+        with patch("_scripts_2.apps.documents.svg_converter.gui.QDesktopServices.openUrl") as opened:
+            self.win._open_log_folder()
+        opened.assert_not_called()
+        self.assertEqual(self.log_dir.read_bytes(), b"existing file must survive")
+        self.assertIn("만들 수 없습니다", self.win.lbl_status.text())
 
     def test_engine_log_callback(self):
         """Verify engine's convert_image calls log_callback during processing."""

@@ -819,8 +819,14 @@ class SvgConverterWindow(QMainWindow):
 
     def _open_log_folder(self):
         log_dir = self._persistent_log_dir()
-        log_dir.mkdir(parents=True, exist_ok=True)
-        QDesktopServices.openUrl(QUrl.fromLocalFile(str(log_dir)))
+        try:
+            log_dir.mkdir(parents=True, exist_ok=True)
+        except OSError:
+            self.lbl_status.setText("⚠️ 로그 폴더를 만들 수 없습니다.")
+            return
+        if not QDesktopServices.openUrl(QUrl.fromLocalFile(str(log_dir))):
+            self.lbl_status.setText("⚠️ 로그 폴더를 열 수 없습니다.")
+            return
         self.lbl_status.setText(f"📂 로그 폴더 열기: {log_dir}")
 
     def _clear_log(self):
